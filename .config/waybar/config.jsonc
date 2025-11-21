@@ -1,0 +1,285 @@
+{
+  "layer": "top",
+
+  "modules-left": ["group/menu",  
+                  "hyprland/workspaces",
+                  "hyprland/window"
+ 
+  ],
+  "modules-center": ["clock",
+                     "custom/swaync"], 
+  "modules-right": ["battery",
+                   "group/brightness",
+                   "group/volume",
+                   "group/hardware",
+                   "group/wifi",
+                   "group/blue",
+                   "group/power"
+  ],
+
+
+ 
+  "clock": {
+    "format": "{:%a  %d  %H:%M}",
+    "format-alt": "{:%Y-%m-%d %H:%M:%S}",
+    "interval": 60,
+    "tooltip": false
+},
+  "hyprland/window": {
+      "format": "{}",
+      "separate-outputs": true,
+      "max-length": 30
+  },
+
+ "hyprland/workspaces": {
+  "format": "",
+  "persistent-workspaces": {
+         "*": 3, // 5 workspaces by default on every monitor
+         "HDMI-A-1": 3 // but only three on HDMI-A-1
+   },
+  "on-click": "activate",
+  "on-scroll-down": "hyprctl dispatch workspace e+1",
+  "on-scroll-up": "hyprctl dispatch workspace e-1",
+  "cursor": "pointer"
+    },
+  
+   
+
+
+  "battery": { 
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+     },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󱟢"],
+    "max-length": 25
+  },
+  
+    "group/wifi": {
+    "orientation": "horizontal",
+    "modules": ["custom/icon-wifi","network"],
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+      "hide-on-unfocus": true
+     }
+  },
+  "custom/icon-wifi": {
+   "format": " " ,
+   "tooltip": false
+  },
+  "network": {
+      "interface": "wlan0",
+      "format": "{ifname}",
+      "format-wifi": "{essid}",
+      "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+      "format-disconnected": "", 
+      "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+      "tooltip-format-wifi": "{essid} ({signalStrength}%)   ",
+      "tooltip-format-ethernet": "{ifname}  ",
+      "tooltip-format-disconnected": "Disconnected",
+      "max-length": 50,
+      "markup": true,
+      "on-click": "nm-connection-editor"
+  },
+
+    "group/blue": {
+    "orientation": "horizontal",
+    "modules": ["custom/icon-blue","bluetooth"],
+    "drawer": {
+      "transition-duration": 800,
+      "transition-left-to-right": false,
+      "hide-on-unfocus": true
+     }
+  },
+
+  "custom/icon-blue": {
+   "format": " " ,
+   "tooltip": false
+  },
+
+  "bluetooth": {
+      // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+      "format": "{status}",
+      "format-disabled": "", // an empty format will hide the module
+      "tooltip": "false",
+      "on-click": "blueberry" ,
+      "format-connected": "{device_alias}" 
+  },
+  
+  "group/volume": {
+    "orientation": "horizontal",
+    "modules": ["pulseaudio", "pulseaudio/slider"],
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+      "hide-on-unfocus": true
+     }
+  }, 
+  
+
+  "pulseaudio": {
+      "format": "󰕾  {volume}%",
+      "format-bluetooth": "󰂰  {volume}%",
+      "format-muted": "󰖁 ",
+      "format-icons": {
+          "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+          "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "phone-muted": "",
+          "portable": "",
+          "car": "",
+          "default": ["", ""]
+      },
+      "scroll-step": 1,
+      "on-click": "pavucontrol",
+      "ignored-sinks": ["Easy Effects Sink"],
+      "markup": true
+  },
+
+  "pulseaudio/slider": {
+   "min": 0,
+   "max": 100,
+   "orientation": "horizontal"
+  },
+
+  "group/menu": {
+    "orientation": "horizontal",
+    "modules": ["custom/icon","custom/launcher","custom/launcher2", "custom/hyprshot"],
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true,
+      "hide-on-unfocus": true
+     }
+  }, 
+
+  "custom/launcher": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/launchers/type-1/launcher.sh"
+  },
+  "custom/launcher2": {
+    "format": "󰋩 ",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/launchers/type-1/wallpicker.sh"
+  },
+  "custom/swaync": {
+    "format": "󰂚",
+    "tooltip": false,
+    "on-click": "swaync-client -R -rs -op"
+  },
+
+  "custom/hyprshot": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "hyprshot -m region -o Pictures/Screenshots/"
+  },
+
+  "custom/icon": {
+   "format": " " ,
+   "tooltip": false
+  },
+
+  
+   "group/hardware": {
+    "orientation": "horizontal",
+    "modules": ["custom/icon2","disk","memory","cpu"],
+    "drawer": {
+      "transition-duration": 900,
+      "transition-left-to-right": false,
+      "hide-on-unfocus": true
+     }
+  }, 
+  "custom/icon2": {
+    "format":" ",
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 30,
+    "format": "   {}%",
+    "max-length": 10,
+    "tooltip": false
+  },
+
+  "disk": {
+    "interval": 30,
+    "format": "  {specific_free:0.2f}GB",
+    "unit": "GB",
+    "tooltip": false
+  },
+
+  "cpu": {
+      "interval": 10,
+      "format": "󰻠  {}%",
+      "max-length": 10,
+      "tooltip": false
+  },
+  
+  "group/power": {
+    "orientation": "horizontal",
+    "modules": ["custom/icon3","custom/shutdown", "custom/reboot", "custom/logout","custom/lock"],
+    "drawer": {
+        "transition-duration": 600,
+        "transition-left-to-right": false,
+        "hide-on-unfocus": true
+    }
+  },
+
+  
+   "custom/lock": {
+    "format": " ",
+    "on-click": "hyprlock"
+  },
+
+
+  "custom/shutdown": {
+    "format": " ",
+    "on-click": "shutdown now"
+  },
+
+  "custom/reboot": {
+      "format": " ",
+      "on-click": "reboot"
+  },
+
+  "custom/logout": {
+      "format": " ",
+      "on-click": "hyprctl dispatch exit"
+  },
+  "custom/icon3": {
+    "format":" ",
+    "tooltip": false
+  },
+  
+  "group/brightness": {
+  "orientation": "horizontal",
+  "modules": ["backlight","backlight/slider"],
+  "drawer": {
+      "transition-duration": 600,
+      "transition-left-to-right": false,
+      "hide-on-unfocus": true
+  }
+},
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}  {percent}% ",
+    "format-icons": ["󰃞 ", "󰃠 "]
+  },
+  "backlight/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+    "device": "intel_backlight"
+}
+
+
+
+}
+
+

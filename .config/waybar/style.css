@@ -1,0 +1,335 @@
+@import "colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "SF Pro Display", Roboto, Helvetica, Arial, sans-serif;
+     min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+;
+    color: @primary;
+  }
+
+  .modules-left,
+  .modules-right,
+  .modules-center {
+   background: @on_primary_fixed; 
+    color: @primary;                    
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    margin: 3px 6px 3px 6px;
+    font-weight: 600;
+    padding: 3px 10px 4px 10px;
+
+  }
+
+
+
+tooltip {
+    background: rgba(43, 48, 59, 0.5);
+    border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+    color : transparent;
+}
+
+/*================Window================*/
+#window {
+  background: @on_primary; 
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  margin: 4px 0px 4px 10px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+  padding: 4px 25px;
+
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+/*================================*/
+
+/*=============Workspaces=============*/
+
+  #workspaces {
+  transition: all 0.3s ease-in-out;
+  background-color: @on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  padding: 0px 10px;
+  margin: 4px 0px 4px 4px;
+  font-weight: 600;
+  font-size: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5)
+ }
+
+#workspaces button {
+  font-size: 2px;
+  padding: 0px 0px;
+  background: @on_primary_fixed;
+  transition: all 0.3s ease-in-out;
+  color: transparent;
+  border-radius: 5px;
+  min-width: 15px;
+  border-bottom: 3px solid transparent;
+  margin: 10px 2px;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: transparent;
+  padding : 0px 0px;
+  margin: 10px 2px;
+  border-radius: 100px;
+  min-width: 35px;
+  min-height: 0px;
+  transition: all 0.3s ease-in-out;
+
+}
+
+/*=================================*/
+
+
+#clock{
+  font-size: 14px;
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 10px;
+  font-weight: 600;
+  margin : 4px 10px 4px 0px; 
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+}
+
+#battery {
+  font-size: 14px;
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 10px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+	margin :4px 5px 4px 0px;
+}
+
+ 
+
+/*=============Volume==============*/
+
+#volume {
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 10px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+  margin :4px 5px;
+
+}
+
+#pulseaudio-slider {
+  padding: 0px 10px;
+  margin: 0;
+  background-color: transparent;
+}
+#pulseaudio-slider slider {
+  opacity: 1;
+  background-color: @primary;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+}
+#pulseaudio-slider trough {
+  min-height: 5px;
+  min-width: 80px;
+  border-radius: 5px;
+  background: @on_primary_fixed;
+}
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background: @primary;
+
+
+}
+/*===================================*/
+
+/*================Menu=================*/
+
+#menu{
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 10px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+  margin :4px 5px 4px 0px;
+} 
+#custom-launcher{
+  background-color: transparent;
+  margin: 0px 5px 0px 10px;
+}
+#custom-launcher2 {
+  background-color:transparent;
+  margin: 0px 5px;
+}
+
+
+#custom-hyprshot {
+  background-color: transparent;
+  margin: 0px 2px 0px 7px;
+}
+
+/*=================================*/
+
+/*===============Hardware==========*/
+
+#hardware {
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 10px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+  margin :4px 5px
+} 
+#disk{
+  background-color: transparent;
+  margin: 0px 5px 0px 10px;
+}
+#memory {
+  background-color:transparent;
+  margin: 0px 5px 0px 10px;
+}
+
+#cpu {
+  background-color:transparent;
+  margin: 0px 10px 0px 10px;
+}
+
+/*============================*/
+
+
+/*=============Power================*/
+ #power {
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 7px 0px 9px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+  margin :4px 0px 4px 5px;
+} 
+#custom-shutdown{
+  background-color: transparent;
+  margin: 0px 5px 0px 10px;
+}
+#custom-reboot {
+  background-color:transparent;
+  margin: 0px 5px 0px 10px;
+}
+
+#custom-logout,
+#custom-lock{
+  background-color:transparent;
+  margin: 0px 10px 0px 10px;
+}
+
+/*===================================*/
+
+/*=============Wifi & Bluetooth============*/
+
+ #wifi{
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 7px 0px 9px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+  margin :4px 5px
+}
+ 
+ #blue{
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 4px 0px 9px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+  margin :4px 5px
+}
+
+#network,
+#bluetooth{
+  background-color:transparent;
+  margin: 0px 5px 0px 5px;
+}
+
+/*==================================*/
+
+
+/*===============Brightness=================*/
+
+ #brightness{
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 4px 0px 9px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+  margin : 4px 5px
+ }
+
+ #backlight-slider slider {
+    padding:0px;
+    opacity: 1; 
+    background-color: @primary;
+    border-radius: 100px;
+    border: none;
+    box-shadow: none;
+
+ }
+ #backlight-slider trough {
+    min-height: 5px;
+    min-width: 80px;
+    border-radius: 5px;
+    background: @on_primary_fixed; }
+ #backlight-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background: @primary;
+ }
+ 
+ /*================================*/
+
+
+ #custom-swaync{
+  background-color:@on_primary;
+  color: @primary;                    
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 0px 12px 0px 10px;
+  font-weight: 600;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+  margin: 4px 0px
+}
+
+
