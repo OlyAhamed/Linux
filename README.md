@@ -4,5 +4,10 @@ A simple hyprland setup
 
 # Install the needed dependecies first to set up this 
 
-``` paru -S hyprlock hyprshot hypridle waybar swaync rofi matugen ``` 
+```
+paru -S hyprlock
+hyprshot hypridle waybar  
+swaync rofi matugen
+
+ ``` 
 
