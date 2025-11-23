@@ -25,8 +25,9 @@
 
 
 
-## Terminal command to install them all at once 
+# Terminal command to install them all at once 
 
+## For arch
 ### Using paru
 ``` 
 paru -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
@@ -39,6 +40,34 @@ paru -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava
 yay -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
 
 ```
+
+## For Debian
+
+```
+sudo apt install rofi neofetch swww waybar cava kitty neovim blueberry brightnessctl nm-connection-editor
+```
+### ⚠ NOT AVAILABLE in Debian repos
+
+- hyprlock
+
+- hypridle
+
+- hyprshot
+
+- matugen
+
+### These are Hyprland ecosystem tools and require either:
+
+##### ✔ Building from source
+###### [ Visit the official wiki of the programs for more information ]
+or
+
+##### ✔ Installing via Flatpak
+
+or
+
+##### ✔ Using a distro that supports Hyprland natively (Arch, Fedora, etc.)
+
 
 ### If you dont have either paru or yay first install yay
 
