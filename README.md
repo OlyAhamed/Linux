@@ -23,5 +23,8 @@
 ### Terminal command to install them all at once 
 
 
-``` paru -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl  ```
+``` 
+paru -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
+
+```
 
