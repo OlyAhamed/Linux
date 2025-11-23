@@ -21,6 +21,7 @@
 - nvim
 - blueberry, nm-connection-editor, brightnessctl
 
+---
 
 ## Terminal command to install them all at once 
 
@@ -50,6 +51,7 @@ makepkg -si
 
 ```
 
+---
 
 ## Make sure you have `git` installed as it is needed to download the whole reposetory. 
 
@@ -64,9 +66,10 @@ sudo pacman -S git
 ```
 sudo apt install git
 ```
+---
 
 ##  Installation
----
+
 #### First back up your old config as this process will erase your current config and switc it with new one. It won't be a problem with a freshly installed hyprland.
 
 ### First git clone the whole reposetory
