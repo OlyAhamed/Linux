@@ -2,7 +2,7 @@
 
 [![Arch Linux](https://img.shields.io/badge/Arch-Linux-blue?style=flat-square)](https://archlinux.org/) [![Hyprland](https://img.shields.io/badge/Hyprland-Wayland-green?style=flat-square)](https://hyprland.org/) [![Shell Script](https://img.shields.io/badge/Shell-Script-yellow?style=flat-square)](https://www.gnu.org/software/bash/)
 
-A clean Hyprland configuration featuring a modern Waybar layout, wallpaper-based theming (matugen + swww), and a full desktop setup script.
+#### A clean Hyprland configuration featuring a modern Waybar layout, wallpaper-based theming (matugen + swww), and a full desktop setup script.
 
 <p align="center">
   <img alt="Hyprland Preview" src="https://github.com/user-attachments/assets/dc208b54-044e-4080-85a7-ba70c0cd084f" width="90%">
