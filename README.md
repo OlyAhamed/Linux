@@ -49,7 +49,7 @@ makepkg -si
 ```
 
 
-#### make sure you have `git` installed as it is needed to download the whole reposetory. 
+#### Make sure you have `git` installed as it is needed to download the whole reposetory. 
 
 ##### If you don't git too first install it
 
@@ -62,10 +62,31 @@ sudo pacman -S git
 ```
 sudo apt install git
 ```
-### now we will start the main installation
-
+---
+###  Installation
+## First back up your old config as this process will erase your current config and switc it with new one. It won't be a problem with a freshly installed hyprland.
 #### First git clone the whole reposetory
 
 ```
 git clone https://github.com/OlyAhamed/Linux.git
 ```
+
+#### Now enter the folder 
+
+```
+cd Linux/.config
+```
+
+#### Now make the setup.sh file executable
+
+```
+chmod +X setup.sh
+```
+
+#### Now run the setup file
+
+```
+./setup.sh
+```
+
+ 
