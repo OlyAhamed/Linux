@@ -98,19 +98,26 @@ makepkg -si
 
 ### 1. First git clone the whole reposetory
 
+```
 git clone https://github.com/OlyAhamed/Linux.git
+```
 
 ### 2. Now enter the folder
-
+```
 cd Linux/.config
+```
 
 ### 3. Now make the setup.sh file executable
 
+```
 chmod +X setup.sh
+```
 
 ### 4. Now run the setup file
 
+```
 ./setup.sh
+```
 
 ##### If it worked you may now uninstall the cloned folder
 sudo rm -rf ~/Linux
