@@ -98,4 +98,11 @@ chmod +X setup.sh
 ./setup.sh
 ```
 
+##### If it worked you may now uninstall the cloned folder
+
+```
+sudo rm -rf ~/Linux
+```
+###### Or just delete it from yourr file manager
+
  
