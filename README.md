@@ -4,6 +4,8 @@
 
 <img width="1920" height="1080" alt="2025-11-21-192352_hyprshot" src="https://github.com/user-attachments/assets/dc208b54-044e-4080-85a7-ba70c0cd084f" />
 
+---
+
 ## Install the needed dependecies first to set up this 
 
 ### Used programs
@@ -62,28 +64,30 @@ sudo pacman -S git
 ```
 sudo apt install git
 ```
+
+##  Installation
 ---
-###  Installation
-## First back up your old config as this process will erase your current config and switc it with new one. It won't be a problem with a freshly installed hyprland.
-#### First git clone the whole reposetory
+#### First back up your old config as this process will erase your current config and switc it with new one. It won't be a problem with a freshly installed hyprland.
+
+### First git clone the whole reposetory
 
 ```
 git clone https://github.com/OlyAhamed/Linux.git
 ```
 
-#### Now enter the folder 
+### Now enter the folder 
 
 ```
 cd Linux/.config
 ```
 
-#### Now make the setup.sh file executable
+### Now make the setup.sh file executable
 
 ```
 chmod +X setup.sh
 ```
 
-#### Now run the setup file
+### Now run the setup file
 
 ```
 ./setup.sh
