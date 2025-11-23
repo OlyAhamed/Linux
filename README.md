@@ -74,25 +74,25 @@ sudo apt install git
 
 #### First back up your old config as this process will erase your current config and switc it with new one. It won't be a problem with a freshly installed hyprland.
 
-### First git clone the whole reposetory
+### 1. First git clone the whole reposetory
 
 ```
 git clone https://github.com/OlyAhamed/Linux.git
 ```
 
-### Now enter the folder 
+### 2. Now enter the folder 
 
 ```
 cd Linux/.config
 ```
 
-### Now make the setup.sh file executable
+### 3. Now make the setup.sh file executable
 
 ```
 chmod +X setup.sh
 ```
 
-### Now run the setup file
+### 4. Now run the setup file
 
 ```
 ./setup.sh
