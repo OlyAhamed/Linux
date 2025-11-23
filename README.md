@@ -91,6 +91,9 @@ makepkg -si
 
 ```
 
+### Install NVChad if you don't have it 
+#### NVChad is a thing related to nvim, the text editor. It completely changes how nvim looks. To install it [click here](https://nvchad.com/docs/quickstart/install)...
+
 ## Installation 
 
 #### ⚠ BACK UP your existing Hyprland config first!
