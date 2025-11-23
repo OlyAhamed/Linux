@@ -35,7 +35,7 @@ yay -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava 
 
 ```
 
-###### If you dont have either paru or yay first install yay
+##### If you dont have either paru or yay first install yay
 
 ```
 sudo pacman -S --needed base-devel
@@ -53,11 +53,11 @@ makepkg -si
 
 ##### If you don't git too first install it
 
-###### For Arch
+##### For Arch
 ```
 sudo pacman -S git
 ```
-###### For Debian 
+##### For Debian 
 
 ```
 sudo apt install git
@@ -67,5 +67,5 @@ sudo apt install git
 #### First git clone the whole reposetory
 
 ```
-git clone
+git clone https://github.com/OlyAhamed/Linux.git
 ```
