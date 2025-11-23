@@ -1,137 +1,58 @@
-# A simple hyprland setup with modern waybar and themes according to the wallpaper
+# 🔥 Hyprland Setup — Modern Waybar + Auto-Theming
 
+[![Arch Linux](https://img.shields.io/badge/Arch-Linux-blue?style=flat-square)](https://archlinux.org/) [![Hyprland](https://img.shields.io/badge/Hyprland-Wayland-green?style=flat-square)](https://hyprland.org/) [![Shell Script](https://img.shields.io/badge/Shell-Script-yellow?style=flat-square)](https://www.gnu.org/software/bash/)
 
+A clean Hyprland configuration featuring a modern Waybar layout, wallpaper-based theming (matugen + swww), and a full desktop setup script.
 
-<img width="1920" height="1080" alt="2025-11-21-192352_hyprshot" src="https://github.com/user-attachments/assets/dc208b54-044e-4080-85a7-ba70c0cd084f" />
+<p align="center">
+  <img alt="Hyprland Preview" src="https://github.com/user-attachments/assets/dc208b54-044e-4080-85a7-ba70c0cd084f" width="90%">
+</p>
 
-
-# Under maintenanee so not for use yet !!!
-
-
-## Install the needed dependecies first to set up this 
-
-### Used programs
-
-- Hyprlock,hypridle,hyprshot
-- rofi
-- swaync
-- neofetch
-- matugen, swwww
-- waybar
-- cava
-- kitty
-- nvim
-- blueberry, nm-connection-editor, brightnessctl
-
-
-
-# Terminal command to install them all at once 
-
-## For arch
-### Using paru
-``` 
-paru -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
-
-```
-
-### Using yay
-
-``` 
-yay -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
-
-```
-
-## For Debian
-
-```
-sudo apt install rofi neofetch swww waybar cava kitty neovim blueberry brightnessctl nm-connection-editor
-```
-### ⚠ NOT AVAILABLE in Debian repos
-
-- hyprlock
-
-- hypridle
-
-- hyprshot
-
-- matugen
-
-### These are Hyprland ecosystem tools and require either:
-
-##### ✔ Building from source
-###### [ Visit the official wiki of the programs for more information ]
-or
-
-##### ✔ Installing via Flatpak
-
-or
-
-##### ✔ Using a distro that supports Hyprland natively (Arch, Fedora, etc.)
-
-
-### If you dont have either paru or yay first install yay
-
-```
-sudo pacman -S --needed base-devel
-
-git clone https://aur.archlinux.org/yay.git
-
-cd yay
-
-makepkg -si
-
-```
-
-
-
-## Make sure you have `git` installed as it is needed to download the whole reposetory. 
-
-### If you don't git too first install it
-
-#### For Arch
-```
-sudo pacman -S git
-```
-#### For Debian 
-
-```
-sudo apt install git
-```
 ---
 
-##  Installation
+## ⚠ Project Status
+🚧 **Under active maintenance — NOT ready for production use yet.**  
+Feel free to explore or modify, but expect bugs or missing features.
 
-#### First back up your old config as this process will erase your current config and switc it with new one. It won't be a problem with a freshly installed hyprland.
+---
 
-### 1. First git clone the whole reposetory
+# 📚 Features
+- Modern Waybar theme synced with wallpaper colors  
+- Hyprlock + Hypridle + Hyprshot integration  
+- Clean Rofi theme  
+- Auto wallpaper theming using **matugen + swww**  
+- Preconfigured apps (Kitty, NeoVim, swaync, Cava, Blueberry, etc.)  
+- Full setup script to install and apply configs automatically  
 
-```
-git clone https://github.com/OlyAhamed/Linux.git
-```
+---
 
-### 2. Now enter the folder 
+# 📦 Required Packages
 
-```
-cd Linux/.config
-```
+### Hyprland Ecosystem
+- hyprlock  
+- hypridle  
+- hyprshot  
+- matugen  
+- swww  
 
-### 3. Now make the setup.sh file executable
+### General Tools
+- rofi  
+- swaync  
+- neofetch  
+- waybar  
+- cava  
+- kitty  
+- neovim  
+- blueberry  
+- nm-connection-editor  
+- brightnessctl  
 
-```
-chmod +X setup.sh
-```
+---
 
-### 4. Now run the setup file
+# 📥 Install Dependencies
 
-```
-./setup.sh
-```
+## Arch Linux
 
-##### If it worked you may now uninstall the cloned folder
-
-```
-sudo rm -rf ~/Linux
-```
-###### Or just delete it from yourr file manager
-
- 
+### Using `paru`
+```bash
+paru -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
