@@ -64,7 +64,7 @@ paru -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava
 yay -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
 ```
 
-### For `Debian`
+## For `Debian`
 
 ```
 sudo apt install rofi neofetch swww waybar cava kitty neovim blueberry brightnessctl nm-connection-editor
