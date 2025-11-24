@@ -49,7 +49,7 @@ Feel free to explore or modify, but expect bugs or missing features.
 
 ---
 
-# 📥 Install Dependencies
+#  Install Dependencies
 
 #### Arch Linux
 
@@ -71,7 +71,7 @@ sudo apt install rofi neofetch swww waybar cava kitty neovim blueberry brightnes
 ```
 #### Not available in Debian repos
 
-##### These require flatpak, source builds, or a Hyprland-native distro:
+These require flatpak, source builds, or a Hyprland-native distro:
 
 - hyprlock
 
@@ -81,18 +81,11 @@ sudo apt install rofi neofetch swww waybar cava kitty neovim blueberry brightnes
 
 - matugen
 
-### Installing yay (if needed)
 
-```
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
 
-```
+Install NVChad if you don't have it
 
-### Install NVChad if you don't have it 
-#### NVChad is a thing related to nvim, the text editor. It completely changes how nvim looks. To install it [click here](https://nvchad.com/docs/quickstart/install)...
+NVChad is a thing related to nvim, the text editor. It completely changes how nvim looks. To install it [click here](https://nvchad.com/docs/quickstart/install)...
 
 ## Installation 
 
