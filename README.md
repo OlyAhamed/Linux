@@ -47,41 +47,6 @@ Feel free to explore or modify, but expect bugs or missing features.
 - nm-connection-editor  
 - brightnessctl  
 
----
-
-#  Install Dependencies
-
-#### Arch Linux
-
- Using `paru`
-```bash
-paru -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
-```
-
- Using `yay`
-
-```
-yay -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
-```
-
-#### For `Debian`
-
-```
-sudo apt install rofi neofetch swww waybar cava kitty neovim blueberry brightnessctl nm-connection-editor
-```
-#### Not available in Debian repos
-
-These require flatpak, source builds, or a Hyprland-native distro:
-
-- hyprlock
-
-- hypridle
-
-- hyprshot
-
-- matugen
-
-
 
 Install NVChad if you don't have it
 
@@ -89,38 +54,37 @@ NVChad is a thing related to nvim, the text editor. It completely changes how nv
 
 ## Installation 
 
-#### ⚠ BACK UP your existing Hyprland config first!
-##### This setup will overwrite your ~/.config files.
+#### ⚠ BACK UP your existing Hyprland config first! This setup will overwrite your ~/.config files.
 
-### 1. First git clone the whole reposetory
+ 1. First git clone the whole reposetory
 
 ```
 git clone https://github.com/OlyAhamed/Linux.git
 ```
 
-### 2. Now enter the folder
+ 2. Now enter the folder
 ```
 cd Linux/.config
 ```
 
-### 3. Now make the setup.sh file executable
+ 3. Now make the setup.sh file executable
 
 ```
 chmod +X setup.sh
 ```
 
-### 4. Now run the setup file
+ 4. Now run the setup file
 
 ```
 ./setup.sh
 ```
 
-##### If it worked you may now uninstall the cloned folder
+ If it worked you may now uninstall the cloned folder
 ```
 sudo rm -rf ~/Linux
 ```
 
-###### Or just delete it from yourr file manager
+Or just delete it from your file manager
 
 
 
