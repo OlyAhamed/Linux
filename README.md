@@ -1,4 +1,4 @@
-# 🔥 Hyprland Setup — Modern Waybar + Auto-Theming
+#  Hyprland Setup — Modern Waybar + Auto-Theming
 
 [![Arch Linux](https://img.shields.io/badge/Arch-Linux-blue?style=flat-square)](https://archlinux.org/) [![Hyprland](https://img.shields.io/badge/Hyprland-Wayland-green?style=flat-square)](https://hyprland.org/) [![Shell Script](https://img.shields.io/badge/Shell-Script-yellow?style=flat-square)](https://www.gnu.org/software/bash/)
 
@@ -11,12 +11,12 @@
 ---
 
 ## ⚠ Project Status
-🚧 **Under active maintenance — NOT ready for production use yet.**  
+ **Under active maintenance — NOT ready for production use yet.**  
 Feel free to explore or modify, but expect bugs or missing features.
 
 ---
 
-# 📚 Features
+#  Features
 - Modern Waybar theme synced with wallpaper colors  
 - Hyprlock + Hypridle + Hyprshot integration  
 - Clean Rofi theme  
@@ -26,7 +26,7 @@ Feel free to explore or modify, but expect bugs or missing features.
 
 ---
 
-# 📦 Required Packages
+#  Required Packages
 
 ### Hyprland Ecosystem
 - hyprlock  
@@ -51,20 +51,20 @@ Feel free to explore or modify, but expect bugs or missing features.
 
 # 📥 Install Dependencies
 
-## Arch Linux
+#### Arch Linux
 
-### Using `paru`
+ Using `paru`
 ```bash
 paru -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
 ```
 
-### Using `yay`
+ Using `yay`
 
 ```
 yay -S hyprlock hypridle hyprshot rofi swaync neofetch matugen swww waybar cava kitty nvim blueberry nm-connection-editor brightnessctl
 ```
 
-## For `Debian`
+#### For `Debian`
 
 ```
 sudo apt install rofi neofetch swww waybar cava kitty neovim blueberry brightnessctl nm-connection-editor
@@ -81,7 +81,7 @@ sudo apt install rofi neofetch swww waybar cava kitty neovim blueberry brightnes
 
 - matugen
 
-### 🛠 Installing yay (if needed)
+### Installing yay (if needed)
 
 ```
 sudo pacman -S --needed base-devel
