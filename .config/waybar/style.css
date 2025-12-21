@@ -1,0 +1,209 @@
+@import "colors.css";
+
+/* Global Reset */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "SF Pro Display", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @primary;
+}
+
+/* Common Container Styles (Left, Center, Right) */
+.modules-left, .modules-right, .modules-center {
+    background: @on_primary_fixed;
+    color: @primary;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    padding: 4px 9px 5px 9px;
+}
+
+.modules-left   { border-radius: 0px 0px 17px 0px; margin: 0px 6px 3px 0px; }
+.modules-right  { border-radius: 0px 0px 0px 17px; margin: 0px 0px 3px 6px; }
+.modules-center { border-radius: 0px 0px 17px 17px; margin: 0px 6px 3px 6px; }
+
+/* ============================================================ */
+/* THE MASTER BLOCK                                             */
+/* All modules sharing the same background, color, and shadow   */
+/* ============================================================ */
+#window,
+#workspaces,
+#clock,
+#battery,
+#volume,
+#menu,
+#hardware,
+#custom-power,
+#wifi,
+#blue,
+#brightness,
+#custom-swaync,
+#custom-launcher,
+#custom-gemini {
+    background-color: @on_primary;
+    color: @primary;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.05), 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* ============================================================ */
+/* INDIVIDUAL OVERRIDES (Margins, Padding, Unique Borders)      */
+/* ============================================================ */
+
+#window {
+    border-radius: 10px 4px 10px 10px;
+    margin: 4px 0px 4px 10px;
+    padding: 4px 25px;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#workspaces {
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 4px 0px 4px 4px;
+    font-size: 2px;
+}
+
+#clock {
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 4px 10px 4px 10px;
+}
+
+#battery {
+    font-size: 14px;
+    border-radius: 4px 10px 10px 10px;
+    padding: 0px 10px;
+    margin: 4px 5px 4px 0px;
+}
+
+#volume, 
+#hardware,
+#wifi,
+#blue, 
+#brightness {
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 4px 5px;
+}
+
+#menu {
+    border-radius: 4px 10px 10px 4px;
+    padding: 0px 4px 0px 10px;
+    margin: 4px 5px 4px 0px;
+}
+
+#custom-power {
+    border-radius: 10px 4px 4px 10px;
+    padding: 0px 7px 0px 9px;
+    margin: 4px 0px 4px 5px;
+}
+
+#custom-swaync {
+    border-radius: 10px 4px 10px 10px;
+    padding: 0px 12px 0px 10px;
+    margin: 4px 0px;
+}
+
+#custom-launcher {
+    border-radius: 10px;
+    padding: 0px 12px 0px 10px;
+    margin: 4px 0px;
+}
+
+#custom-gemini {
+    border-radius: 4px 10px 10px 10px;
+    padding: 0px 14px 0px 10px;
+    margin: 4px 10px 4px 0px;
+}
+
+/* Unique Padding/Spacing for Internal Elements */
+#wifi, 
+#blue { 
+    padding: 0px 7px 0px 9px; }
+#blue {
+    padding-right: 4px; }
+#brightness {
+    padding: 0px 4px 0px 9px; }
+
+/* ============================================================ */
+/* SUBSIDIARY ELEMENTS (Buttons, Sliders, Icons)               */
+/* ============================================================ */
+
+/* Workspaces Internal */
+#workspaces button {
+    font-size: 2px;
+    background: @on_primary_fixed;
+    transition: all 0.3s ease-in-out;
+    color: transparent;
+    border-radius: 5px;
+    min-width: 15px;
+    margin: 10px 2px;
+}
+
+#workspaces button.active {
+    background-color: @primary;
+    min-width: 35px;
+    border-radius: 100px;
+}
+
+/* Sliders (Audio & Backlight) */
+#pulseaudio-slider, 
+#backlight-slider {
+    background-color: transparent; }
+
+#pulseaudio-slider slider,
+#backlight-slider slider {
+    background-color: @primary;
+    border-radius: 100px;
+}
+
+#pulseaudio-slider trough, 
+#backlight-slider trough {
+    min-height: 5px;
+    min-width: 80px;
+    border-radius: 5px;
+    background: @on_primary_fixed;
+}
+
+#pulseaudio-slider highlight, 
+#backlight-slider highlight {
+    border-radius: 5px;
+    background: @primary;
+}
+
+/* Transparent sub-icons */
+#custom-launcher2, 
+#custom-hyprshot,
+#custom-settings,
+#disk, 
+#memory,
+#cpu,
+#custom-shutdown,
+#custom-reboot,
+#custom-logout, 
+#custom-lock,
+#network,
+#bluetooth {
+    background-color: transparent;
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(43, 48, 59, 0.5);
+    border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label { color: transparent; }
