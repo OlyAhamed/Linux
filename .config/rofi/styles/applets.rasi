@@ -1,0 +1,191 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+/*****----- Global Properties -----*****/
+@import                          "~/.config/rofi/shared/colors.rasi"
+@import                          "~/.config/rofi/shared/fonts.rasi"
+
+* {
+    border-colour:               var(primary);
+    handle-colour:               var(selected);
+    background-colour:           var(on-primary-fixed);
+    background-colour2:           var(on-primary);
+    foreground-colour:           var(foreground);
+    alternate-background:        var(on-primary-fixed);
+    normal-background:           var(on-primary-fixed);
+    normal-foreground:           var(foreground);
+    urgent-background:           var(urgent);
+    urgent-foreground:           var(background);
+    active-background:           var(active);
+    active-foreground:           var(background);
+    selected-normal-background:  var(selected);
+    selected-normal-foreground:  var(background);
+    selected-urgent-background:  var(active);
+    selected-urgent-foreground:  var(background);
+    selected-active-background:  var(urgent);
+    selected-active-foreground:  var(background);
+    alternate-normal-background: var(on-primary-fixed);
+    alternate-normal-foreground: var(foreground);
+    alternate-urgent-background: var(urgent);
+    alternate-urgent-foreground: var(background);
+    alternate-active-background: var(active);
+    alternate-active-foreground: var(background);
+}
+
+
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+/*****----- Global Properties -----*****/
+/*
+USE_ICON=NO
+*/
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       300px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               25px;
+    border-color:                @border-colour;
+    cursor:                      "default";
+    background-color:            @urgent-foreground;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     10px;
+    background-color:            transparent;
+    orientation:                 horizontal;
+    children:                    [ "listview" ];
+}
+
+/*****----- Imagebox -----*****/
+imagebox {
+    background-color:            transparent;
+    background-image:            url("~/.cache/hyprlock/wallpaper.png", height);
+    children:                    [ "dummy", "inputbar", "dummy" ];
+    border-radius:               17px;
+    margin:                      0px 0px 0px 0px;
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     20px;
+    background-color:            transparent;
+    text-color:                  @foreground-colour;
+    children:                    [ "dummy", "textbox-prompt-colon", "prompt", "dummy"];
+}
+
+dummy{
+    background-color:            transparent;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    padding:                     9px 18px 10px 15px;
+    background-color:            @urgent-foreground;
+    text-color:                  @foreground-colour;
+    border-radius:               15px;
+}
+prompt {
+    enabled:                     true;
+    padding:                     10px;
+    border-radius:               15px;
+    background-color:            @background-colour;
+    text-color:                  @foreground-colour;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               200px;
+    border-color:                @border-colour;
+    background-color:            @selected-normal-background;
+    text-color:                  @foreground-colour;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     6;
+    lines:                       1;
+    cycle:                       true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    
+    spacing:                     5px;
+    background-color:            transparent;
+    cursor:                      "default";
+    border-radius:               0px;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected-normal-background;
+    background-color:            transparent;
+    text-color:                  @foreground-colour;
+    cursor:                      pointer;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:            var(background);
+    text-color:                  var(foreground);
+}
+element normal.urgent,
+element alternate.urgent,
+element selected.active {
+    background-color:            var(urgent);
+    text-color:                  var(background);
+}
+element normal.active,
+element alternate.active,
+element selected.urgent {
+    background-color:            @selected-normal-background;
+    text-color:                  var(background);
+}
+element selected.normal {
+    background-color:            @selected-normal-background;
+    text-color:                  var(foreground);
+    border-radius:               100px;
+}
