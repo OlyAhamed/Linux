@@ -1,0 +1,157 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# --- Unified Stealth Minimal Format ---
+format = """
+[](lackluster_slate)\
+$os\
+$hostname\
+[](bg:lackluster_dir_bg fg:lackluster_slate)\
+$directory\
+[](fg:lackluster_dir_bg bg:lackluster_gray_accent)\
+[](fg:lackluster_gray_accent bg:lackluster_slate)\
+[](fg:lackluster_slate)\
+$fill \
+[](fg:lackluster_slate)\
+$git_branch\
+$git_status\
+[](fg:lackluster_dir_bg bg:lackluster_slate)\
+$c$rust$golang$nodejs$php$java$kotlin$haskell$python$lua$nix_shell$cmake$package$docker_context$elixir$elm$zig\
+[](fg:lackluster_slate bg:lackluster_dir_bg)\
+[ $time ](bold fg:lackluster_white bg:lackluster_slate)\
+[](fg:lackluster_slate)\
+$cmd_duration
+
+$character"""
+
+palette = 'lackluster_custom'
+
+[palettes.lackluster_custom]
+lackluster_black      = "#000000"
+lackluster_white      = "#cccccc" 
+lackluster_slate      = "#708090" # Favorite Blue
+lackluster_bg         = "#262626" 
+lackluster_dir_bg     = "#3d3d3d" # Language Block BG
+lackluster_gray       = "#949494" # Language Icon color
+lackluster_gray_accent = "#555555" # Transition Step
+
+[fill]
+symbol = " "
+
+[os]
+disabled = false
+style = "bold bg:lackluster_slate fg:lackluster_white"
+format = "[$symbol]($style)"
+
+[os.symbols]
+Arch = "󰣇 "
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+# Enabled Hostname & Disabled Username
+[hostname]
+ssh_only = false
+style = "bold bg:lackluster_slate fg:lackluster_white"
+format = "[$hostname ]($style)"
+
+[username]
+disabled = true
+
+[directory]
+style = "bg:lackluster_dir_bg fg:lackluster_white"
+format = "[ $path ]($style)" 
+
+[git_branch]
+symbol = ""
+style = "bg:lackluster_slate fg:lackluster_white"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:lackluster_slate fg:lackluster_white"
+format = '[($all_status$ahead_behind )]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:lackluster_slate fg:lackluster_white"
+format = '$time' 
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:lackluster_slate)'
+error_symbol = '[❯](bold fg:lackluster_gray)'
+
+[cmd_duration]
+format = "  $duration"
+style = "fg:lackluster_gray"
+
+# --- Tech Modules (Grey icons on Directory BG) ---
+[c]
+symbol = " "
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[rust]
+symbol = ""
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[golang]
+symbol = ""
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[nodejs]
+symbol = ""
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[php]
+symbol = ""
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[java]
+symbol = " "
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[kotlin]
+symbol = ""
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[haskell]
+symbol = ""
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[python]
+symbol = ""
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[lua]
+symbol = " "
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[nix_shell]
+symbol = " "
+format = '[[ $symbol($state) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[cmake]
+symbol = "󰔧 "
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[package]
+symbol = "󰏗 "
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[docker_context]
+symbol = " "
+format = '[[ $symbol($context) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[elixir]
+symbol = " "
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[elm]
+symbol = " "
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
+
+[zig]
+symbol = " "
+format = '[[ $symbol($version) ](fg:lackluster_gray bg:lackluster_dir_bg)]($style)'
