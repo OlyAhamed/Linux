@@ -1,0 +1,76 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    background: transparent;
+    /* Muted Industrial Grey instead of pure off-white */
+    color: #949494; 
+}
+
+.window {
+    /* Thinner margin to look more integrated with the waybar */
+    margin: 8px;
+    background-color: rgba(26, 26, 26, 0.95); /* Deeper #1a1a1a ghost color */
+    border: 1px solid #262626; /* Subtle rice border */
+    border-radius: 12px;
+}
+
+#input {
+    margin: 10px 10px 5px 10px;
+    padding: 12px 15px;
+    color: #f2f2f2;
+    font-size: 16px;
+    font-weight: 600;
+    /* Cleaner input field that matches the pill vibe */
+    background-color: rgba(38, 38, 38, 0.5); 
+    border-radius: 8px;
+}
+
+#input:focused {
+    /* Removing font-size jump on focus for a smoother feel */
+    box-shadow: none;
+    color: #708090; /* Slate Blue on focus */
+}
+
+#input placeholder {
+    /* Getting rid of the 'Red' - using Sage Green for a ghostly feel */
+    color: #708070;
+    opacity: 0.5;
+}
+
+#inner-box {
+    margin: 10px;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 5px;
+}
+
+#scroll {
+    margin: 0px 5px;
+    border-radius: 8px;
+}
+
+#text {
+    margin: 2px 0px;
+    color: #949494;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 12px;
+}
+
+/* The "Active" entry uses your Slate Blue pill look */
+#entry:selected {
+    background-color: #708090;
+    border-radius: 8px;
+}
+
+/* The text inside the selected entry pops in black for high contrast */
+#entry:selected #text {
+    color: #101010;
+    font-weight: 700;
+}
+
+#img {
+    margin-right: 10px;
+    padding: 5px 0px 5px 10px;
+}
