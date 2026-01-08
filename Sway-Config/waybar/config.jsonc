@@ -1,0 +1,77 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-left": 150,
+  "margin-right": 150,
+  "margin-top": 10,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+  "modules-center": [
+    "sway/window"
+  ],
+  "modules-right": [
+    "sway/scratchpad",
+    "battery",
+    "network",
+    "clock"
+  ],
+
+  "custom/swaync": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "swaync-client -R -rs -op"
+  },
+  "sway/scratchpad": {
+    "format": "{icon}   - {count}",
+    "show-empty": false,
+    "format-icons": [
+      "",
+      ""
+    ],
+    "tooltip": true,
+    "tooltip-format": "{app}"
+  },
+  "sway/window": {
+    "format": "{app_id}",
+    "max-length": 50
+  },
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "battery": {
+    "format": " {capacity}%",
+    "format-charging": "󰠠    {capacity}%"
+  },
+  "clock": {
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "max-length": 25
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "sway/mode": {
+    "format": " {}",
+    "max-length": 50
+  },
+  "network": {
+    "format-wifi": "  {bandwidthDownBytes:>10} -  {bandwidthUpBytes:>10} ",
+    "format-disconnected": "󱚼 ",
+    "format-disabled": "󰖪 ",
+    "interval": 5,
+    "tooltip-format-wifi": "Connected to   -   {essid}"
+  }
+}

@@ -1,0 +1,25 @@
+window#osd {
+    padding: 0px 10px;
+    border-radius: 10px;
+    background: #262626; /* Dark/translucent */
+    border: 0px solid #89b4fa;         /* Blue border */
+}
+
+progressbar trough {
+    min-height: 12px;   /* The "Narrow" look */
+    min-width: 180px;  /* Adjust width here */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 9px;
+}
+
+progress {
+    background: #f2f2f2; /* Blue accent */
+    border-radius: 9px;
+}
+
+/* Hide the icon (the image) */
+image {
+    opacity: .5;
+    color: #f2f2f2; 
+}
+

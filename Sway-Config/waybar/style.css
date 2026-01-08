@@ -1,0 +1,100 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "SF Pro Display", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  min-height: 0;
+  font-weight: 600;
+}
+
+window#waybar {
+  background-color: rgba(15, 20, 23, 0.9);
+  color: #dee3e6;
+  border: 0;
+
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid;
+  border-radius: 7px
+}
+
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+  padding: 0 7px;
+  background: rgba(100, 114, 125, 0.1);
+  color: rgba(222, 227, 230, 0.3);
+}
+
+#workspaces button:hover,
+#workspaces button.focused:hover,
+#workspaces button:not(.focused):not(.empty):hover {
+  background: rgba(100, 114, 125, 8);
+  color: #f2f2f2;
+  box-shadow: none
+}
+#workspaces button.focused {
+  background: rgba(100, 114, 125, 0.5);
+  border: 0px solid;
+  border-color: #64727D;
+  color: rgba(222, 227, 230, 1);
+}
+
+#workspaces button:not(.focused):not(.empty) {
+  background: rgba(100, 114, 125, 0.3);
+  color: rgba(222, 227, 230, 0.7);
+}
+#workspaces button:last-child {
+border-radius: 0px 9px 9px 0px;
+}
+
+#mode,
+#window,
+#network,
+#bluetooth {
+  padding: 5px 5px;
+  margin: 0px 7px;
+  background-color: transparent;
+  color: #f2f2f2;
+  font-weight: bold;
+}
+#custom-swaync {
+  font-size: 22px;
+}
+#clock {
+  padding: 1px 15px;
+  margin: 4px 7px;
+  background-color: #708070;
+  color: #262626;
+  font-weight: bold;
+  border-radius: 100;
+}
+
+#battery {
+  padding: 1px 15px;
+  margin: 4px 7px;
+  background-color: #708090;
+  color: #262626;
+  font-weight: bold;
+  border-radius: 100px;
+}
+
+#mode {
+  background: rgba(100, 114, 125, 0.2);
+}
+
+
+
+#battery.warning:not(.charging) {
+  background: #f53c3c;
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
