@@ -1,0 +1,138 @@
+/* Global */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "SF Pro Display", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  min-height: 0;
+  font-weight: 600;
+}
+
+/* ===================== */
+/* Base / Text colors    */
+/* ===================== */
+
+window#waybar {
+  background-color: rgba(30, 30, 46, 0.92);
+  color: #cdd6f4;
+  border: 0;
+}
+
+tooltip,
+#workspaces button {
+  background-color: rgba(49, 50, 68, 0.9);
+}
+
+tooltip label,
+#window,
+#network,
+#bluetooth,
+#mode {
+  color: #cdd6f4;
+}
+
+/* ===================== */
+/* Tooltips              */
+/* ===================== */
+
+tooltip {
+  border: 1px solid #585b70;
+  border-radius: 8px;
+}
+
+/* ===================== */
+/* Workspaces             */
+/* ===================== */
+
+#workspaces button {
+  padding: 0 5px;
+  color: #a6adc8;
+}
+
+#workspaces button:hover {
+  background-color: #45475a;
+  color: #cdd6f4;
+}
+
+#workspaces button.focused {
+  background-color: #cba6f7;
+  color: #11111b;
+}
+
+#workspaces button:not(.focused):not(.empty) {
+  background-color: rgba(88, 91, 112, 0.6);
+  color: #bac2de;
+}
+
+#workspaces button:last-child {
+  border-radius: 0px 10px 10px 0px;
+}
+
+/* ===================== */
+/* Modules                */
+/* ===================== */
+
+#mode,
+#window,
+#network,
+#bluetooth {
+  padding: 5px 6px;
+  margin: 0 7px;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+#custom-swaync {
+  font-size: 22px;
+  color: #89b4fa;
+}
+
+/* ===================== */
+/* Clock & Battery        */
+/* ===================== */
+
+#clock,
+#battery {
+  padding: 2px 16px;
+  margin: 4px 7px;
+  color: #11111b;
+  font-weight: bold;
+  border-radius: 999px;
+}
+
+#clock {
+  background-color: #89b4fa;
+}
+
+#battery {
+  background-color: #a6e3a1;
+}
+
+/* ===================== */
+/* Mode indicator         */
+/* ===================== */
+
+#mode {
+  background-color: rgba(203, 166, 247, 0.2);
+}
+
+/* ===================== */
+/* Battery warning        */
+/* ===================== */
+
+#battery.warning:not(.charging) {
+  background-color: #f38ba8;
+  color: #11111b;
+  animation-name: blink;
+  animation-duration: 0.6s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0.5;
+  }
+}
+
