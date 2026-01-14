@@ -1,6 +1,6 @@
 The programs used in here are 
 
-1 (main) -> SwayFX, waybar, wofi
+1 (main) -> SwayFX, waybar, wofi, autotiling
 
 2 (terminal) -> kitty, fish, nvim, tmux, starship
 
