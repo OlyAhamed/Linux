@@ -1,0 +1,185 @@
+/* ===================== */
+/* Global Settings       */
+/* ===================== */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono Nerd Font", sans-serif;
+  font-size: 17px;
+  min-height: 0;
+}
+
+/* ===================== */
+/* Base Window           */
+/* ===================== */
+window#waybar {
+  background-color: rgba(30, 30, 46, 0.92);
+  color: #cdd6f4;
+}
+
+/* ===================== */
+/* Tooltips              */
+/* ===================== */
+tooltip {
+  background-color: #313244;
+  border: 1px solid #585b70;
+  border-radius: 8px;
+}
+
+tooltip label {
+  color: #cdd6f4;
+}
+
+/* ===================== */
+/* Workspaces            */
+/* ===================== */
+#workspaces button {
+  padding: 0px 5px 0px 3px;
+  background-color: #313244;
+  color: #b4befe;
+  font-weight: bold;
+}
+
+#workspaces button:hover {
+  background-color: #45475a;
+  color: #cdd6f4;
+}
+
+#workspaces button.focused {
+  background-color: #89dceb;
+  color: #11111b;
+}
+
+#workspaces button:not(.focused):not(.empty) {
+  background-color: rgba(88, 91, 112, 0.6);
+  color: #a6e3a1;
+}
+
+#workspaces button:last-child {
+  border-radius: 0px 10px 10px 0px;
+}
+
+/* ===================== */
+/* Modules (Transparent) */
+/* ===================== */
+#mode,
+#window,
+#custom-music,
+#tray {
+  padding: 5px 10px;
+  margin: 0 7px;
+  background-color: transparent;
+  font-weight: bold;
+  color: #cdd6f4;
+}
+
+#custom-music {
+  color: #cba6f7;
+}
+
+/* ===================== */
+/* Pill Modules          */
+/* ===================== */
+#network,
+#pulseaudio,
+#clock,
+#battery,
+#custom-lock,
+#custom-power {
+  padding: 2px 16px;
+  margin: 4px 7px;
+  color: #11111b;
+  border-radius: 999px;
+}
+#pulseaudio {
+  background: linear-gradient(60deg, #eba0ac, #fab387);
+}
+
+#network {
+  background: linear-gradient(60deg, #f9e2af, #a6e3a1);
+}
+
+#clock {
+  background: linear-gradient(60deg, #89b4fa, #b4befe);
+}
+
+#battery {
+  background: linear-gradient(60deg, #a6e3a1, #94e2d5);
+}
+
+#custom-lock {
+  background: linear-gradient(60deg, #b4befe, #f5c2e7);
+  padding : 2px 19px 2px 16px;
+}
+
+#custom-power {
+  background: linear-gradient(60deg, #f38ba8, #eba0ac);
+  font-weight: bold;
+}
+/* ===================== */
+/* Mode Indicator        */
+/* ===================== */
+#mode {
+  background-color: rgba(203, 166, 247, 0.2);
+}
+
+/* ===================== */
+/* Battery Warning       */
+/* ===================== */
+#battery.warning:not(.charging) {
+  background-color: #f38ba8;
+  color: #11111b;
+}
+
+/* ===================== */
+/* Hover States          */
+/* ===================== */
+#pulseaudio:hover,
+#network:hover,
+#clock:hover,
+#battery:hover,
+#custom-lock:hover,
+#custom-power:hover {
+  opacity: 0.85;
+}
+
+#workspaces button:hover {
+  opacity: 0.9;
+}
+
+/* ===================== */
+/* Additional States     */
+/* ===================== */
+#pulseaudio.muted {
+  background-color: #6c7086;
+  opacity: 0.7;
+}
+
+#network.disconnected {
+  background-color: #6c7086;
+  opacity: 0.6;
+}
+
+#battery.charging {
+  background-color: #89dceb;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f38ba8;
+  color: #11111b;
+}
+
+/* ===================== */
+/* Workspace States      */
+/* ===================== */
+#workspaces button.urgent {
+  background-color: #f38ba8;
+  color: #11111b;
+}
+
+#workspaces button.active:not(.focused) {
+  background-color: rgba(166, 227, 161, 0.3);
+  color: #a6e3a1;
+}
+
+
