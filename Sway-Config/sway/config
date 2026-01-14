@@ -27,10 +27,10 @@ assign [app_id="com.obsproject.Studio"] workspace number 5
 
 
 # Wallpaper
-output * bg ~/Pictures/walls/mess.png fill
+output * bg ~/Pictures/walls/evening-sky.png fill
 
 # Borders and Gaps
-default_border pixel 1
+default_border pixel 0
 gaps inner 10
 gaps outer 0
 
@@ -42,31 +42,27 @@ blur_brightness 1
 blur_contrast 1.3
 
 # Corner Radius
-corner_radius 7
+corner_radius 10
 
 # Shadows
 shadows enable
-shadow_blur_radius 10
+shadow_blur_radius 15
 shadow_color 000000FF
 shadow_inactive_color 00000080
 
 # Dim Inactive Windows
 default_dim_inactive .2
 dim_inactive_colors.unfocused #000000ff
-dim_inactive_colors.urgent #ff0000ff
+dim_inactive_colors.urgent #f38ba8ff
 
 # Window Colors
-# class                 border    backgr.   text      indicator   child_border
-client.focused          #f2f2f2   #000000   #ffffff   #777575     #777575
-client.unfocused        #333333   #000000   #888888   #292d2e     #222222
-client.urgent           #2f343a   #900000   #ffffff   #900000     #900000
+# class                 border     backgr.     text       indicator   child_border
+client.focused          #cdd6f4    #11111b     #ffffff    #cba6f7     #cba6f7
+client.unfocused        #45475a    #11111b     #a6adc8    #313244     #313244
+client.urgent           #f38ba8    #7f1d2d     #ffffff    #f38ba8     #f38ba8
 
 # Layer Effects
-layer_effects "waybar" shadows enable; corner_radius 9
-layer_effects "wofi" corner_radius 10; blur enable
-layer_effects "rofi" corner_radius 25; blur enable
-layer_effects "swaync-control-center" corner_radius 25; shadows enable
-
+layer_effects "waybar" shadows enable; corner_radius 12
 # ====================
 # HARDWARE
 # ====================
@@ -90,16 +86,20 @@ input type:keyboard {
 # ====================
 # AUTOSTART
 # ====================
+exec_always autotiling
 exec_always swaync
 exec hypridle
 exec swayosd-server
+exec dbus-update-activation-environment --all
+exec gnome-keyring-daemon --start --components=secrets
 # ====================
 # KEY BINDINGS
 # ====================
 
 # Basics
+bindsym $mod+n exec pkill waybar || waybar
 bindsym Alt+b exec brave
-bindsym Alt+s exec spotify
+bindsym Alt+s exec spot12y
 bindsym Alt+c exec code 
 bindsym Alt+Shift+w exec kitty --class float_wifi impala
 bindsym Alt+Shift+b exec kitty --class float_bt bluetui
@@ -107,7 +107,6 @@ bindsym Alt+Shift+b exec kitty --class float_bt bluetui
 bindsym Alt+Shift+e exec kitty --class power_session -o shell_integration=disabled -o cursor_shape=block -o scrollback_lines=0 ~/.config/scripts/session.sh
 bindsym Alt+Shift+s exec kitty --class ss_menu -o shell_integration=disabled -o cursor_shape=block -o scrollback_lines=0 ~/.config/scripts/screenshot.sh
 
-bindsym $mod+n exec $term nvim
 bindsym $mod+Return exec $term
 bindsym $mod+w kill
 bindsym $mod+d exec $menu
@@ -175,21 +174,6 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-# Resize Mode
-mode "resize" {
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
-
 # Utilities 
 # Audio
 bindsym --locked XF86AudioMute exec swayosd-client --output-volume mute-toggle
@@ -203,12 +187,6 @@ bindsym --locked XF86MonBrightnessDown exec swayosd-client --brightness lower
 # Screenshot
 bindsym Print exec grim
 
-# ====================
-# BAR
-# ====================
-bar {
-    swaybar_command waybar
-}
 
 # ====================
 # INCLUDES
@@ -221,9 +199,12 @@ include /etc/sway/config.d/*
 # position
 for_window [app_id="float_wifi"] floating enable, resize set 900 800, move position center
 for_window [app_id="float_bt"] floating enable, resize set 900 800, move position center
-for_window [app_id="power_session"] floating enable, resize set 430 370, move position center
+for_window [app_id="power_session"] floating enable, resize set 415 350, move position center
 for_window [app_id="ss_menu"] floating enable, resize set 420 310, move position center
 
  # system
 workspace_auto_back_and_forth yes 
 focus_follows_mouse yes
+
+
+
