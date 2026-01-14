@@ -51,13 +51,13 @@
     "format": "{:%H:%M}",
     "max-length": 25
     },
-  "network": {
-    "format-wifi": " ",
-    "format-disconnected": "󱚼 ",
-    "format-disabled": "󰖪 ",
-    "interval": 5,
-    "tooltip-format-wifi": "Connected to   -   {essid}",
-    "on-click": "kitty --class float_wifi impala"
+   "network": {
+        "format-wifi": " ",
+        "format-disconnected": "󱚼 ",
+        "format-disabled": "󰖪 ",
+        "interval": 5,
+        "tooltip-format-wifi": "Connected to   -   {essid}",
+        "on-click": "kitty --class float_wifi impala"
   },
   "battery": {
     "format": "{capacity}%",
