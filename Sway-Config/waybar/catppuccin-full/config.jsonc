@@ -1,17 +1,20 @@
-{
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    // "width": 1280, // Waybar width
-    // Choose the order of the modules,
-    "margin-top": 10, 
+[{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 10,
     "margin-right": 150,
     "margin-left": 150,
     "modules-left": ["sway/workspaces"],
     "modules-center": ["custom/music"],
-    "modules-right": ["battery","pulseaudio", "network", "clock", "custom/lock", "custom/power"],
-    
+    "modules-right": ["pulseaudio", "custom/separator", "clock", "custom/separator", "battery", "network", "custom/lock", "custom/power"],
 
-"sway/workspaces": {
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
         "format": "{icon}",
@@ -29,16 +32,12 @@
             "urgent": ""
         },
         "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [] 
+            "1": [], "2": [], "3": [], "4": [], "5": [], "6": []
         }
     },
+
     "custom/music": {
-        "format": "  {}",
+        "format": "<span color='#cba6f7'></span>  {}",
         "escape": true,
         "interval": 5,
         "tooltip": false,
@@ -46,40 +45,51 @@
         "on-click": "playerctl play-pause",
         "max-length": 50
     },
+
     "clock": {
-    "interval": 60,
-    "format": "{:%H:%M}",
-    "max-length": 25
+        "interval": 60,
+        "format": "<span color='#89b4fa'>󰥔</span> {:%H:%M}",
+        "max-length": 25
     },
-   "network": {
-        "format-wifi": " ",
-        "format-disconnected": "󱚼 ",
-        "format-disabled": "󰖪 ",
-        "interval": 5,
-        "tooltip-format-wifi": "Connected to   -   {essid}",
-        "on-click": "kitty --class float_wifi impala"
-  },
-  "battery": {
-    "format": "{capacity}%",
-    "format-charging": "󰠠 {capacity}%"
-  },
+
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-muted": "",
+        "format": "<span color='#eba0ac'>{icon}</span> {volume}%",
+        "format-muted": "<span color='#eba0ac'></span> Muted",
         "format-icons": {
             "default": ["", "", " "]
         },
         "on-click": "pavucontrol"
     },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span color='#a6e3a1'>{icon}</span> {capacity}%",
+        "format-charging": "<span color='#a6e3a1'>󰠠 {icon}</span> {capacity}%",
+        "format-full": "<span color='#a6e3a1'>󰁹</span> Fully Charged",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "network": {
+        "format-wifi": " ",
+        "format-disconnected": "󱚼 ",
+        "format-disabled": "󰖪 ",
+        "interval": 5,
+        "tooltip-format-wifi": "Connected to - {essid}",
+        "on-click": "kitty --class float_wifi impala"
+    },
+
     "custom/lock": {
         "tooltip": false,
         "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
-        "format": "",
+        "format": ""
     },
+
     "custom/power": {
         "tooltip": false,
         "on-click": "kitty --class power_session -o shell_integration=disabled -o cursor_shape=block -o scrollback_lines=0 ~/.config/scripts/session.sh",
-        "format": "源"
+        "format": ""
     }
-}
+}]
