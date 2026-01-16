@@ -17,6 +17,9 @@ window#waybar {
   color: #cdd6f4;
 }
 
+#custom-separator {
+  color : #b4befe;
+}
 /* ===================== */
 /* Tooltips              */
 /* ===================== */
@@ -44,10 +47,9 @@ tooltip label {
   background-color: #45475a;
   color: #cdd6f4;
 }
-
 #workspaces button.focused {
-  background-color: #89dceb;
-  color: #11111b;
+    background-color: #89dceb;
+    color: #11111b;
 }
 
 #workspaces button:not(.focused):not(.empty) {
@@ -91,8 +93,15 @@ tooltip label {
   color: #11111b;
   border-radius: 999px;
 }
+#pulseaudio,
+#clock,
+#battery{
+  padding: 2px 5px;
+  margin: 4px 5px;
+}
 #pulseaudio {
-  background: linear-gradient(60deg, #eba0ac, #fab387);
+  color: #cdd6f4;
+  margin: 4px 4px;
 }
 
 #network {
@@ -100,11 +109,11 @@ tooltip label {
 }
 
 #clock {
-  background: linear-gradient(60deg, #89b4fa, #b4befe);
+  color:#cdd6f4 ;
 }
 
 #battery {
-  background: linear-gradient(60deg, #a6e3a1, #94e2d5);
+  color: #cdd6f4;
 }
 
 #custom-lock {
@@ -115,6 +124,7 @@ tooltip label {
 #custom-power {
   background: linear-gradient(60deg, #f38ba8, #eba0ac);
   font-weight: bold;
+  padding-right: 19px;
 }
 /* ===================== */
 /* Mode Indicator        */
@@ -153,6 +163,7 @@ tooltip label {
 #pulseaudio.muted {
   background-color: #6c7086;
   opacity: 0.7;
+  padding: 2px 18px 2px 15px;
 }
 
 #network.disconnected {
@@ -160,9 +171,6 @@ tooltip label {
   opacity: 0.6;
 }
 
-#battery.charging {
-  background-color: #89dceb;
-}
 
 #battery.critical:not(.charging) {
   background-color: #f38ba8;
@@ -181,5 +189,6 @@ tooltip label {
   background-color: rgba(166, 227, 161, 0.3);
   color: #a6e3a1;
 }
+
 
 
