@@ -1,54 +1,45 @@
-# 🐧 Personal Linux Configurations
+# 🐧 Oly's Linux Dotfiles & Configs
 
-Welcome to my personal dotfiles repository! This repo contains my custom configurations for **Sway**, featuring a heavy focus on aesthetics with **Catppuccin** and custom **Eww** widgets.
-
-> [!IMPORTANT]  
-> **Note for Visitors:** These files are heavily tailored for my specific hardware and personal workflow. Things might not be "plug-and-play" or immediately clear. If you are looking for a specific script or config, please explore the directories manually.
+A collection of my personal Linux configuration files, scripts, and UI experiments. This repository is primarily focused on my **Sway WM** setup on Wayland.
 
 ---
 
-## 📸 Preview Gallery
+## 🛠️ Main Setup: Sway + Wayland
+The current active heart of this repository. Everything here is customized for productivity and a clean Catppuccin-based aesthetic.
 
-### 🛰️ Waybar
-A highly customized, full-width status bar using the Catppuccin color palette.
-[**View Config →**](https://github.com/OlyAhamed/Linux/tree/main/Sway-Config/waybar/catppuccin-full)
+### 🛰️ Waybar (Status Bar)
+A full-featured status bar with custom modules for system monitoring and workspace management.
+* **Theme:** Catppuccin
+* **Location:** `Sway-Config/waybar/catppuccin-full`
 
-<img src="https://github.com/user-attachments/assets/4a89b8e1-df01-4275-9a67-691ee011cdab" width="100%" alt="Waybar Screenshot" />
+<img src="https://github.com/user-attachments/assets/4a89b8e1-df01-4275-9a67-691ee011cdab" width="100%" alt="Waybar Preview" />
 
----
-
-### 🖼️ Eww Widgets
-Custom ElKowars wacky widgets (Eww) for system control and media.
-[**View Config →**](https://github.com/OlyAhamed/Linux/tree/main/Sway-Config/eww)
+### 🖼️ Eww (Widgets)
+Custom widgets built with `eww` to handle media playback and system controls.
+* **Location:** `Sway-Config/eww`
 
 | Media Player | Control Center |
 | :--- | :--- |
-| <img src="https://github.com/user-attachments/assets/06cf5410-d34b-406b-840e-e526ecca3f9a" width="350" alt="Media Widget" /> | <img src="https://github.com/user-attachments/assets/149fbbb3-899a-493e-93d6-294160e5811c" width="450" alt="Control Center" /> |
+| <img src="https://github.com/user-attachments/assets/06cf5410-d34b-406b-840e-e526ecca3f9a" width="350" /> | <img src="https://github.com/user-attachments/assets/149fbbb3-899a-493e-93d6-294160e5811c" width="450" /> |
 
 ---
 
-## 📂 Repository Structure
-
-* **`Sway-Config/`**: Core window manager settings and keybindings.
-* **`Sway-Config/waybar/`**: Styling and modules for the top bar.
-* **`Sway-Config/eww/`**: Yuck and SCSS files for the interactive widgets.
-
-## 🛠️ Key Components
-* **WM:** Sway (Wayland)
-* **Bar:** Waybar
-* **Widgets:** Eww
-* **Colors:** Catppuccin
+## ⚠️ Legacy Content
+> [!CAUTION]
+> **Deprecated Files:** The `.config` directory and other older folders are **no longer maintained**. I do not work on them anymore. They are kept here only for historical reference or for anyone who might want to salvage specific scripts from my old setups. Use them at your own risk!
 
 ---
 
-## 🤝 Contributing & Support
-Since this is a personal setup, I don't provide active support for installation. However, feel free to **fork** it or cherry-pick parts of the code for your own Rice!
+## 📂 Repository Breakdown
 
-**Found something missing?** Just dig through the directories—it’s likely in there somewhere.
+* **`Sway-Config/`**: **[ACTIVE]** My current Sway window manager setup.
+    * `waybar/`: Styling and configuration for the bar.
+    * `eww/`: Custom ElKowars Wacky Widgets.
+* **`.config/`**: **[LEGACY]** Old configurations (No longer updated).
+* **Other Scripts/Dirs**: Assorted tools and tweaks collected over time.
+
+## 📝 Personal Note
+Everything in here is configured for my specific machine and workflow. If you're looking for something specific and can't find it, feel free to poke around the subdirectories. 
 
 ---
-*Maintained by [OlyAhamed](https://github.com/OlyAhamed)*
-
-
-
-
+**Maintained by [OlyAhamed](https://github.com/OlyAhamed)**
