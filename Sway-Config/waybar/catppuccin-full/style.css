@@ -18,7 +18,7 @@ window#waybar {
 }
 
 #custom-separator {
-  color : #b4befe;
+  color : #515373;
 }
 /* ===================== */
 /* Tooltips              */
@@ -59,6 +59,7 @@ tooltip label {
 
 #workspaces button:last-child {
   border-radius: 0px 10px 10px 0px;
+  box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.35)
 }
 
 /* ===================== */
@@ -120,11 +121,34 @@ tooltip label {
   background: linear-gradient(60deg, #b4befe, #f5c2e7);
   padding : 2px 19px 2px 16px;
 }
-
 #custom-power {
-  background: linear-gradient(60deg, #f38ba8, #eba0ac);
-  font-weight: bold;
-  padding-right: 19px;
+    /* Using Catppuccin Mocha Accents: Mauve, Pink, Red, Peach, Yellow, Teal */
+    background: linear-gradient(45deg, 
+        #cba6f7, #f5c2e7, #f38ba8, #fab387, #f9e2af, #94e2d5, #cba6f7
+    );
+    
+    /* 1. Large size makes the colors move across the button */
+    background-size: 400% 400%;
+    
+    /* 2. Faster duration makes it more eye-catching (try 3s to 6s) */
+    animation: gradient_f 4s ease infinite;
+
+    font-weight: bold;
+    padding: 0 25px;
+    color: #1e1e2e; /* Dark 'Base' color for text so it's readable on bright colors */
+    border-radius: 100px;
+}
+
+@keyframes gradient_f {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 /* ===================== */
 /* Mode Indicator        */
@@ -189,6 +213,5 @@ tooltip label {
   background-color: rgba(166, 227, 161, 0.3);
   color: #a6e3a1;
 }
-
 
 
