@@ -78,7 +78,7 @@
 
     ;; 3. REVEALERS (The Submenus)
     (revealer :transition "slidedown" :reveal cc_wifi_menu_open :duration "300ms"
-      (box :class "cc-submenu" :orientation "v" :space-evenly false
+      (box :class "cc-submenu" :orientation "v" :space-evenly false :spacing 8
         (box :class "cc-submenu-header" :space-evenly false
           (label :class "cc-submenu-title" :text "WiFi Networks" :halign "start" :hexpand true)
           (button :class "cc-submenu-action" :onclick "~/.config/eww/scripts/get-wifi-networks.sh --scan" (label :text "󰑐 Scan")))
@@ -88,7 +88,7 @@
               (wifi_network_item :network network))))))
 
     (revealer :transition "slidedown" :reveal cc_bluetooth_menu_open :duration "300ms"
-      (box :class "cc-submenu" :orientation "v" :space-evenly false
+      (box :class "cc-submenu" :orientation "v" :space-evenly false :spacing 8
         (box :class "cc-submenu-header" :space-evenly false
           (label :class "cc-submenu-title" :text "Bluetooth Devices" :halign "start" :hexpand true))
         (scroll :height 180 :vscroll true
@@ -97,10 +97,10 @@
               (bluetooth_device_item :device device))))))
 
     (revealer :transition "slidedown" :reveal cc_power_menu_open :duration "300ms"
-      (box :class "cc-submenu" :orientation "v" :spacing 5
-        (button :class "cc-menu-item" :onclick "systemctl poweroff" (label :text "⏻  Power Off" :halign "start"))
-        (button :class "cc-menu-item" :onclick "systemctl reboot" (label :text "󰑐  Restart" :halign "start"))
-        (button :class "cc-menu-item" :onclick "loginctl terminate-user $USER" (label :text "󰈆  Log Out" :halign "start"))))
+      (box :class "cc-submenu" :orientation "v" :spacing 8
+        (button :class "cc-menu-item" :onclick "systemctl poweroff" (label :text "  Power Off" :halign "start"))
+        (button :class "cc-menu-item" :onclick "systemctl reboot" (label :text "  Restart" :halign "start"))
+        (button :class "cc-menu-item" :onclick "loginctl terminate-user $USER" (label :text "  Log Out" :halign "start"))))
 
     ;; 4. SLIDERS
     (box :class "cc-sliders" :orientation "v" :spacing 15 :space-evenly false
