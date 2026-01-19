@@ -1,0 +1,72 @@
+;; Real-time listener logic
+(deflisten media :initial '{"status": "Stopped", "title": "Not Playing", "artist": "No Artist", "art": "", "time": "0:00", "total": "0:00", "perc": 0}'
+  "playerctl --follow metadata --format '{\"status\": \"{{status}}\", \"title\": \"{{title}}\", \"artist\": \"{{artist}}\", \"art\": \"{{mpris:artUrl}}\", \"time\": \"{{duration(position)}}\", \"total\": \"{{duration(mpris:length)}}\", \"perc\": \"{{(position/mpris:length)*100}}\"}' 2>/dev/null")
+
+;; Window Definition (Name is media_player)
+(defwindow media_player
+  :monitor 0
+  :namespace "eww"
+  :geometry (geometry :x "20px"
+                      :y "20px"
+                      :width "320px"
+                      :height "450px"
+                      :anchor "top right")
+  :stacking "overlay"
+  :windowtype "dialog"
+  :wm-ignore false
+  (media_widget))
+
+;; Widget Structure
+(defwidget media_widget []
+  (box :class "media-player-container"
+       :orientation "v"
+       :space-evenly false
+    
+    ;; Album Art
+    (box :class "album-art-container"
+         :style {media.art != "" ? "background-image: url('${media.art}');" : "background-color: #181825;"}
+      (box :class "overlay"
+        (box :orientation "v"
+             :space-evenly false
+             :valign "end"
+          (label :class "artist" 
+                 :text {media.artist != "" ? "${media.artist}" : "Unknown Artist"}
+                 :halign "start"
+                 :limit-width 30)
+          (label :class "title" 
+                 :text {media.title != "" ? "${media.title}" : "Nothing Playing"}
+                 :halign "start"
+                 :limit-width 25))))
+    
+    ;; Controls & Progress
+    (box :class "controls-container"
+         :orientation "v"
+         :space-evenly false
+      
+      (box :class "progress-section"
+           :orientation "v"
+           :space-evenly false
+        (box :class "like-row" :halign "end"
+          (button :class "like-btn" :onclick "notify-send 'Liked'" "󰅖"))
+        
+        (box :class "progress-bar-container"
+          (scale :class "progress-bar"
+                 :value {media.perc != "" ? media.perc : 0}
+                 :min 0
+                 :max 101
+                 :draw-value false
+                 :onchange "playerctl position `bc <<< \"{} * $(playerctl metadata mpris:length) / 100000000\"`")))
+      
+      (box :class "time-row"
+        (label :class "time-current" :halign "start" :text "${media.time}")
+        (label :class "time-total" :halign "end" :text "${media.total}"))
+      
+      (box :class "controls"
+           :halign "center"
+           :spacing 20
+        (button :class "control-btn shuffle" :onclick "playerctl shuffle toggle" "󰒝")
+        (button :class "control-btn" :onclick "playerctl previous" "󰒮")
+        (button :class "control-btn play-pause" :onclick "playerctl play-pause" 
+          {media.status == "Playing" ? "󰏤" : "󰐊"})
+        (button :class "control-btn" :onclick "playerctl next" "󰒭")
+        (button :class "control-btn repeat" :onclick "playerctl loop toggle" "󰑖")))))
