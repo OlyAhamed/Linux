@@ -42,14 +42,15 @@
         "interval": 5,
         "tooltip": false,
         "exec": "playerctl metadata --format='{{ title }}'",
-        "on-click": "playerctl play-pause",
+        "on-click": "~/.config/eww/scripts/toggle_media.sh",
         "max-length": 50
     },
 
     "clock": {
         "interval": 60,
         "format": "<span color='#89b4fa'>󰥔</span> {:%H:%M}",
-        "max-length": 25
+        "max-length": 25,
+        "tooltip": false,
     },
 
     "pulseaudio": {
@@ -89,7 +90,7 @@
 
     "custom/power": {
         "tooltip": false,
-        "on-click": "kitty --class power_session -o shell_integration=disabled -o cursor_shape=block -o scrollback_lines=0 ~/.config/scripts/session.sh",
-        "format": ""
+        "on-click": "~/.config/eww/scripts/toggle_control_center.sh",
+        "format": " "
     }
 }]
