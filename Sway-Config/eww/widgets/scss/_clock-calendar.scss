@@ -1,0 +1,83 @@
+/* Catppuccin Mocha colors for EWW */
+/* Note: EWW's built-in SCSS parser supports variables, but not nesting or gap */
+
+$cc-base: #1e1e2e;
+$cc-text: #cdd6f4;
+$cc-subtext0: #a6adc8;
+$cc-surface0: #313244;
+$cc-surface2: #585b70;
+$cc-blue: #89b4fa;
+
+.clock-calendar-container {
+  background-color: $cc-base;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid $cc-surface0;
+}
+
+.clock {
+  font-size: 56px;
+  font-weight: 500;
+  color: $cc-blue;
+  margin-bottom: 18px;
+  margin-left: 87px;
+}
+
+.date {
+  font-size: 14px;
+  color: $cc-subtext0;
+  margin-bottom: 24px;
+}
+
+/* EWW uses 'box' with spacing attribute, but CSS margin is more reliable */
+.cal-nav {
+  margin-bottom: 16px;
+}
+
+
+.nav-month,
+.nav-year {
+  color: $cc-text;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 13px; 
+}
+
+.cal-header {
+  margin-bottom: 8px;
+}
+
+.cal-day-name {
+  min-width: 36px;
+  color: $cc-subtext0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cal-row {
+  margin-bottom: 4px; /* Simulates vertical gap */
+}
+
+.cal-day {
+  min-width: 36px;
+  min-height: 32px;
+  color: $cc-text;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 0 2px; /* Simulates horizontal gap */
+}
+
+.cal-day:hover {
+  background-color: $cc-surface0;
+}
+
+.today {
+  background-color: $cc-blue;
+  color: $cc-base;
+  font-weight: 600;
+}
+
+.other-month {
+  color: $cc-surface2;
+}
