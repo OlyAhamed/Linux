@@ -18,8 +18,8 @@ A full-featured status bar with custom modules for system monitoring and workspa
 Custom widgets built with `eww` to handle media playback and system controls.
 * **Location:** `Sway-Config/eww`
 
-| Media Player | Control Center | Calender |
-| :--- | :--- |
+| Media Player | Control Center |
+| Calendar     | :--- |
 | <img src="https://github.com/user-attachments/assets/06cf5410-d34b-406b-840e-e526ecca3f9a" width="350" /> | <img src="https://github.com/user-attachments/assets/149fbbb3-899a-493e-93d6-294160e5811c" width="450" /> | <img width="398" height="490" alt="Screenshot_20260120_094601" src="https://github.com/user-attachments/assets/5fb38276-5775-42ed-92b1-e0a22c448ed8" /> |
 
 
