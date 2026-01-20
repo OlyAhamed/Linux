@@ -51,6 +51,7 @@
         "format": "<span color='#89b4fa'>󰥔</span> {:%H:%M}",
         "max-length": 25,
         "tooltip": false,
+        "on-click": "~/.config/eww/scripts/toggle_calender.sh"
     },
 
     "pulseaudio": {
