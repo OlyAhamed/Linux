@@ -4,7 +4,7 @@ A collection of my personal Linux configuration files, scripts, and UI experimen
 
 ---
 
-## 🛰️ Main Setup: Sway + Wayland
+##  Main Setup: Sway + Wayland
 The active heart of this repository. Everything here is customized for productivity and a clean **Catppuccin** aesthetic.
 
 ### Waybar (Status Bar)
@@ -31,11 +31,9 @@ Custom widgets built with `eww` to handle media playback, system controls, and s
 
 ---
 
-## 📂 Repository Breakdown
+##  Repository Breakdown
 
 * **`Sway-Config/`**: **[ACTIVE]** My current Sway window manager setup.
-    * `waybar/`: Styling and configuration for the bar.
-    * `eww/`: Custom ElKowars Wacky Widgets.
 * **`.config/`**: **[LEGACY]** Old configurations (No longer updated).
 * **Other Scripts**: Assorted tools and tweaks collected over time.
 
