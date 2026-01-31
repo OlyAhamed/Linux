@@ -1,0 +1,136 @@
+set $mod Mod4
+font pango:JetBrainsMono Nerd Font 11
+floating_modifier $mod
+
+# Vim-style variables
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $term kitty --config ~/.config/kitty/i3-kitty.conf
+
+# --- ALT BINDINGS (Mod1 = Alt) ---
+bindsym Mod1+b exec brave
+bindsym Mod1+s exec spot12y
+bindsym Mod1+c exec code 
+bindsym Mod1+Shift+w exec kitty --class float_wifi impala
+bindsym Mod1+Shift+b exec kitty --class float_bt bluetui
+bindsym Mod1+Shift+e exec kitty --class power_session -o shell_integration=disabled -o cursor_shape=block -o scrollback_lines=0 ~/.config/scripts/session.sh
+bindsym Mod1+Shift+s exec kitty --class ss_menu -o shell_integration=disabled -o cursor_shape=block -o scrollback_lines=0 ~/.config/scripts/screenshot.sh
+
+# --- NAVIGATION (Vim Keys) ---
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# --- NAVIGATION (Arrow Keys) ---
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# --- LAYOUT & SPLIT ---
+# Using 'g' for horizontal and 'v' for vertical to avoid 'h' conflict
+bindsym $mod+g split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+q layout tabbed
+bindsym $mod+e layout toggle split
+
+# --- SCREEN LOCK (New Bind to avoid conflict) ---
+bindsym $mod+Shift+x exec "sleep 0.1 && i3lock --blur 5"
+
+# --- CORE i3 BINDINGS ---
+bindsym $mod+Return exec $term
+bindsym $mod+w kill
+bindsym $mod+d exec "rofi -show combi -modi window,run,combi -combi-modi window,run"
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# --- WORKSPACES ---
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# --- AUTOSTART & VISUALS ---
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id picom
+exec_always --no-startup-id autotiling
+exec --no-startup-id feh --bg-fill ~/Pictures/walls/Clearday.jpg
+
+# Colors
+client.focused          #cdd6f4 #11111b #ffffff #cba6f7 #cba6f7
+client.unfocused        #45475a #11111b #a6adc8 #313244 #313244
+client.urgent           #f38ba8 #7f1d2d #ffffff #f38ba8 #f38ba8
+
+# Floating Rules
+for_window [class="float_wifi"] floating enable, resize set 900 800, move position center
+for_window [class="float_bt"] floating enable, resize set 900 800, move position center
+for_window [class="power_session"] floating enable, resize set 415 350, move position center
+for_window [class="ss_menu"] floating enable, resize set 420 310, move position center
+
+gaps inner 0
+default_border pixel 2
+
+# --- HARDWARE KEYS (Volume & Brightness) ---
+
+# Audio Control (using pamixer as per your i3 config)
+bindsym XF86AudioRaiseVolume exec "pamixer -ui 3 && pamixer --get-volume > /tmp/xobpipe"
+bindsym XF86AudioLowerVolume exec "pamixer -ud 3 && pamixer --get-volume > /tmp/xobpipe"
+bindsym XF86AudioMute exec "amixer sset Master toggle"
+
+# Brightness Control (X11 standard)
+# Note: Requires brightnessctl or xbacklight installed
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+# Screenshot (grim is wayland-only, replaced with maim or your script)
+bindsym Print exec maim ~/Pictures/$(date +%s).png
+
+
+
