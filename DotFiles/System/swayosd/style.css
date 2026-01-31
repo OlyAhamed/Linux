@@ -1,0 +1,27 @@
+window#osd {
+    padding: 3px 16px;
+    border-radius: 12px;
+    /* Deep dark background with soft transparency */
+    background: rgba(24, 24, 37, 0.85); 
+    border: none;
+}
+
+progressbar trough {
+    min-height: 6px;    /* Thinner for a more minimal look */
+    min-width: 160px;
+    background: rgba(88, 91, 112, 0.3); /* Surface1 - very subtle */
+    border-radius: 4px;
+}
+
+progress {
+    /* Muted Blue (Sky) - less "neon" than Lavender or Rosewater */
+    background: #89dceb; 
+    border-radius: 4px;
+}
+
+image {
+    /* Dimmed icon so it doesn't grab focus */
+    opacity: 0.4;
+    color: #cdd6f4;
+    margin-right: 10px;
+}
