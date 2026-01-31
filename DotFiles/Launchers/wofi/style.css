@@ -1,0 +1,68 @@
+/* FIX: We set the window background to transparent and apply the 
+   solid color to #outer-box to force it to render correctly.
+*/
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    background-color: transparent;
+    color: #cdd6f4; /* Text */
+}
+
+window {
+    margin: 10px;
+    background-color: transparent; /* GTK fix */
+}
+
+#outer-box {
+    margin: 2px;
+    /* Crust is the darkest mocha color for high contrast */
+    background-color: #11111b; 
+    border: 0px solid #b4befe; /* Lavender border */
+    border-radius: 12px;
+    padding: 10px;
+}
+
+#input {
+    margin: 5px;
+    padding: 6px 15px;
+    color: #cdd6f4;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1e1e2e; /* Base (Slightly lighter than Crust) */
+    border-radius: 8px;
+    border: 1px solid #313244;
+}
+
+#input:focused {
+    border: 1px solid #b4befe;
+    color: #b4befe;
+}
+
+#input placeholder {
+    color: #6c7086;
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#text {
+    padding: 8px 12px;
+    color: #cdd6f4;
+}
+
+/* The Selection Pill */
+#entry:selected {
+    background-color: #b4befe; /* Lavender accent */
+    border-radius: 8px;
+}
+
+#entry:selected #text {
+    color: #11111b; /* Crust (Dark text on light background) */
+    font-weight: 700;
+}
+
+#img {
+    margin-right: 10px;
+    padding: 5px 0px 5px 10px;
+}
