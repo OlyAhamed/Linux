@@ -1,0 +1,217 @@
+/* ===================== */
+/* Global Settings       */
+/* ===================== */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono Nerd Font", sans-serif;
+  font-size: 17px;
+  min-height: 0;
+}
+
+/* ===================== */
+/* Base Window           */
+/* ===================== */
+window#waybar {
+  background-color: rgba(30, 30, 46, 0.92);
+  color: #cdd6f4;
+}
+
+#custom-separator {
+  color : #515373;
+}
+/* ===================== */
+/* Tooltips              */
+/* ===================== */
+tooltip {
+  background-color: #313244;
+  border: 1px solid #585b70;
+  border-radius: 8px;
+}
+
+tooltip label {
+  color: #cdd6f4;
+}
+
+/* ===================== */
+/* Workspaces            */
+/* ===================== */
+#workspaces button {
+  padding: 0px 5px 0px 3px;
+  background-color: #313244;
+  color: #b4befe;
+  font-weight: bold;
+}
+
+#workspaces button:hover {
+  background-color: #45475a;
+  color: #cdd6f4;
+}
+#workspaces button.focused {
+    background-color: #89dceb;
+    color: #11111b;
+}
+
+#workspaces button:not(.focused):not(.empty) {
+  background-color: rgba(88, 91, 112, 0.6);
+  color: #a6e3a1;
+}
+
+#workspaces button:last-child {
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.35)
+}
+
+/* ===================== */
+/* Modules (Transparent) */
+/* ===================== */
+#mode,
+#window,
+#custom-music,
+#tray {
+  padding: 5px 10px;
+  margin: 0 7px;
+  background-color: transparent;
+  font-weight: bold;
+  color: #cdd6f4;
+}
+
+#custom-music {
+  color: #cba6f7;
+}
+
+/* ===================== */
+/* Pill Modules          */
+/* ===================== */
+#network,
+#pulseaudio,
+#clock,
+#battery,
+#custom-lock,
+#custom-power {
+  padding: 2px 16px;
+  margin: 4px 7px;
+  color: #11111b;
+  border-radius: 999px;
+}
+#pulseaudio,
+#clock,
+#battery{
+  padding: 2px 5px;
+  margin: 4px 5px;
+}
+#pulseaudio {
+  color: #cdd6f4;
+  margin: 4px 4px;
+}
+
+#network {
+  background: linear-gradient(60deg, #f9e2af, #a6e3a1);
+}
+
+#clock {
+  color:#cdd6f4 ;
+}
+
+#battery {
+  color: #cdd6f4;
+}
+
+#custom-lock {
+  background: linear-gradient(60deg, #b4befe, #f5c2e7);
+  padding : 2px 19px 2px 16px;
+}
+#custom-power {
+    /* Using Catppuccin Mocha Accents: Mauve, Pink, Red, Peach, Yellow, Teal */
+    background: linear-gradient(45deg, 
+        #cba6f7, #f5c2e7, #f38ba8, #fab387, #f9e2af, #94e2d5, #cba6f7
+    );
+    
+    /* 1. Large size makes the colors move across the button */
+    background-size: 400% 400%;
+    
+    /* 2. Faster duration makes it more eye-catching (try 3s to 6s) */
+    animation: gradient_f 4s ease infinite;
+
+    font-weight: bold;
+    padding: 0 25px;
+    color: #1e1e2e; /* Dark 'Base' color for text so it's readable on bright colors */
+    border-radius: 100px;
+}
+
+@keyframes gradient_f {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* ===================== */
+/* Mode Indicator        */
+/* ===================== */
+#mode {
+  background-color: rgba(203, 166, 247, 0.2);
+}
+
+/* ===================== */
+/* Battery Warning       */
+/* ===================== */
+#battery.warning:not(.charging) {
+  background-color: #f38ba8;
+  color: #11111b;
+}
+
+/* ===================== */
+/* Hover States          */
+/* ===================== */
+#pulseaudio:hover,
+#network:hover,
+#clock:hover,
+#battery:hover,
+#custom-lock:hover,
+#custom-power:hover {
+  opacity: 0.85;
+}
+
+#workspaces button:hover {
+  opacity: 0.9;
+}
+
+/* ===================== */
+/* Additional States     */
+/* ===================== */
+#pulseaudio.muted {
+  background-color: #6c7086;
+  opacity: 0.7;
+  padding: 2px 18px 2px 15px;
+}
+
+#network.disconnected {
+  background-color: #6c7086;
+  opacity: 0.6;
+}
+
+
+#battery.critical:not(.charging) {
+  background-color: #f38ba8;
+  color: #11111b;
+}
+
+/* ===================== */
+/* Workspace States      */
+/* ===================== */
+#workspaces button.urgent {
+  background-color: #f38ba8;
+  color: #11111b;
+}
+
+#workspaces button.active:not(.focused) {
+  background-color: rgba(166, 227, 161, 0.3);
+  color: #a6e3a1;
+}
+
+

@@ -1,0 +1,72 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 0,
+
+    "modules-left": ["clock"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": [
+        "battery", 
+        "custom/sep", 
+        "pulseaudio",
+        "custom/sep",
+        "network", 
+        "custom/sep", 
+        "bluetooth" 
+    ],
+
+    "custom/sep": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "1": [], "2": [], "3": [], "4": [], "5": []
+        }
+    },
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "tooltip-format": "{:%A, %B %d}"
+    },
+
+    "pulseaudio": {
+        "format": " {volume}%",
+        "format-muted": "󰝟",
+        "on-click": "kitty --class float_window cavcontrol"
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-disconnected": "󱚼",
+        "format-disabled": "󰖪",
+        "interval": 5,
+        "tooltip-format-wifi": "Connected to - {essid}",
+        "on-click": "kitty -c ~/.config/kitty/hypr-kitty.conf  impala"
+    },
+
+    "bluetooth": {
+        "format": " ",
+        "format-disabled": "󰂲",
+        "format-connected": "",
+        "tooltip-format": "{controller_alias}",
+        "tooltip-format-connected": "{device_alias}",
+        "on-click": "kitty -c ~/.config/kitty/hypr-kitty.conf  bluetui"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰠠 {icon} {capacity}%",
+        "format-full": "󰁹 Fully Charged",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    }
+}

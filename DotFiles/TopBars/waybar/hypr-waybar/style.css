@@ -1,0 +1,77 @@
+/* Kanagawa Colors */
+@define-color bg_dark  rgba(24, 24, 35, 0.9); 
+@define-color fg_main  #dcd7ba;               
+@define-color fg_dim   #54546d;               
+@define-color active   #c0a36e; /* AutumnYellow */
+@define-color hover_bg rgba(220, 215, 186, 0.1);
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono Nerd", monospace;
+    font-size: 17px;
+}
+
+window#waybar {
+    background-color: #121212;
+    color: @fg_main;
+}
+
+/* --- LEFT & CENTER --- */
+#clock {
+    padding: 0 15px;
+    color: @active;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: @fg_dim;
+    margin: 0px 2px;
+}
+
+#workspaces button.active {
+    color: @fg_main;
+    border-bottom: 2px solid @active;
+    background-color: @hover_bg;
+}
+
+#workspaces button.visible,
+#workspaces button.persistent {
+    color: #777575; 
+}
+#workspaces button:not(.focused):not(.empty) {
+  background-color: transparent;
+  color : @fg_main;
+}
+/* --- RIGHT SIDE + HOVER EFFECTS --- */
+#custom-sep {
+    color: @fg_dim;
+    padding: 0 2px;
+}
+
+/* Grouping modules for hover effect */
+#pulseaudio, #network, #bluetooth, #battery {
+    padding: 0 10px;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent; /* Keeps bar height stable */
+}
+
+/* Hover effect similar to active workspace */
+#pulseaudio:hover, 
+#network:hover, 
+#bluetooth:hover {
+    color: @active;
+    border-bottom: 2px solid @active;
+}
+
+#battery {
+    padding-right: 15px;
+}
+
+#bluetooth {
+  margin: 0px 5px 0px 0px;
+}
+
+
+
+
