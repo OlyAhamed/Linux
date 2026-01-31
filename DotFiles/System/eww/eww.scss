@@ -1,0 +1,11 @@
+@import "./widgets/scss/activate-linux";
+@import "./widgets/scss/media-player";
+@import "./widgets/scss/control-center";
+@import "./widgets/scss/clock-calendar";
+
+* {
+  all: unset; // Basic reset for GTK
+  font-family: "Ubuntu", sans-serif;
+}
+
+

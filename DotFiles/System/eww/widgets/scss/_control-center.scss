@@ -1,0 +1,195 @@
+/* GNOME Control Center - Catppuccin Mocha Gradient Edition */
+
+/* Primary Container */
+.control-center {
+  background-color: #1e1e2e;
+  background-image: linear-gradient(to bottom right, #1e1e2e, #181825);
+  border: 1px solid rgba(205, 214, 244, 0.15);
+  border-radius: 12px;
+  padding: 0;
+  color: #cdd6f4;
+  font-family: "Cantarell", "Inter", system-ui, sans-serif;
+}
+
+/* Header - GNOME Headerbar Style */
+.cc-header {
+  background-color: #181825;
+  background-image: linear-gradient(to bottom, #181825, #11111b);
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(205, 214, 244, 0.1);
+  border-radius: 12px 12px 0 0;
+}
+
+.cc-time {
+  font-size: 48px;
+  font-weight: 800;
+  color: #89b4fa;
+}
+
+.cc-date {
+  font-size: 17px;
+  font-weight: 500;
+  color: #a6adc8;
+}
+
+.cc-user-icon {
+  font-size: 34px;
+  color: #cba6f7;
+  margin-right: 30px;
+}
+
+/* Quick Toggles Section */
+.cc-quick-toggles {
+  padding: 16px;
+}
+
+.cc-toggle-btn {
+  background-color: #313244;
+  background-image: linear-gradient(to bottom right, #313244, #1e1e2e);
+  border: 1px solid rgba(205, 214, 244, 0.1);
+  border-radius: 8px;
+}
+
+.cc-toggle-btn:hover {
+  background-image: linear-gradient(to bottom right, #45475a, #313244);
+}
+
+.cc-toggle-btn.active {
+  background-color: #89b4fa;
+  background-image: linear-gradient(to bottom right, #89b4fa, #b4befe);
+  border-color: transparent;
+}
+
+.cc-toggle-btn.active label {
+  color: #11111b;
+}
+
+.pill {
+  min-height: 64px;
+  border-radius: 10px;
+}
+
+.pill-left {
+  min-width: 120px;
+  padding: 12px 14px;
+  border-radius: 8px 0 0 8px;
+}
+
+.pill-left:hover {
+  background-color: rgba(205, 214, 244, 0.03);
+}
+
+.pill-right {
+  min-width: 48px;
+  padding: 12px;
+  font-size: 30px;
+  border-radius: 0 8px 8px 0;
+  border-left: 1px solid rgba(205, 214, 244, 0.1);
+}
+
+.pill-right:hover {
+  background-color: rgba(205, 214, 244, 0.05);
+}
+
+.cc-toggle-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.cc-toggle-label {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cc-toggle-status {
+  font-size: 13px;
+  font-weight: 500;
+  color: #a6adc8;
+}
+
+/* Submenu Styling */
+.cc-submenu {
+  background-color: #313244;
+  background-image: linear-gradient(to bottom right, #313244, #181825);
+  border: 1px solid rgba(205, 214, 244, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 0px 15px 15px 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cc-submenu-header {
+  font-size: 20px; 
+  border-bottom: 1px solid rgba(205, 214, 244, 0.1);
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: #f2f2f2;
+}
+
+.cc-submenu-action {
+  background-color: transparent;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: #89b4fa;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(205, 214, 244, 0.1);
+}
+
+.cc-submenu-action:hover {
+  background-color: #89b4fa;
+  background-image: linear-gradient(to bottom right, #89b4fa, #b4befe);
+  color: #11111b;
+}
+
+/* Sliders Section */
+.cc-sliders {
+  padding: 16px;
+  border-top: 1px solid rgba(205, 214, 244, 0.1);
+}
+
+/* Scale/Slider Styling - GTK Specific */
+scale trough {
+  background-color: rgba(205, 214, 244, 0.1);
+  border-radius: 100px;
+  min-height: 8px;
+}
+
+scale highlight {
+  border-radius: 60px 0px 0px 60px;
+  background-image: linear-gradient(to right, #89b4fa, #b4befe);
+}
+
+.cc-brightness-slider highlight {
+  background-image: linear-gradient(to right, #fab387, #f9e2af);
+}
+
+.cc-volume-slider highlight {
+  background-image: linear-gradient(to right, #cba6f7, #89b4fa);
+}
+
+scale slider {
+  background-color: #f5e0dc;
+  background-image: linear-gradient(to bottom right, #f5e0dc, #cdd6f4);
+  border-radius: 200px;
+  min-height: 18px;
+  min-width: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.cc-slider-icon {
+  font-size: 27px;
+  color: #bac2de;
+  margin-right: 5px;
+  min-width: 25px; 
+}
+
+.cc-slider-icon.volume {
+  color: #cba6f7;
+  margin-left: 2px;
+}
+
+.cc-slider-icon.brightness {
+  color: #f9e2af;
+}

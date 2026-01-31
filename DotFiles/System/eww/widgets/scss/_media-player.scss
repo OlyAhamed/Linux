@@ -1,0 +1,48 @@
+.media-player-container {
+  background-color: #1e1e2e;
+  border-radius: 16px;
+  border: 2px solid #313244;
+}
+
+.album-art-container {
+  min-height: 280px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #181825;
+  border-radius: 14px 14px 0 0;
+}
+
+.overlay {
+  background-image: linear-gradient(to bottom, transparent, rgba(30, 30, 46, 0.95));
+  padding: 20px;
+  min-height: 280px;
+  border-radius: 14px 14px 0 0;
+}
+
+.artist { color: #cdd6f4; font-size: 14px; font-weight: 500; }
+.title { color: #f5e0dc; font-size: 18px; font-weight: 700; }
+
+.controls-container {
+  background-color: #1e1e2e;
+  padding: 10px 20px 20px 20px;
+  border-radius: 0 0 16px 16px;
+}
+
+.progress-bar trough { background-color: #313244; border-radius: 40px; min-height: 8px; }
+.progress-bar highlight { background-color: #a6e3a1; border-radius: 40px 0px 0px 40px; }
+
+.time-row { color: #a6adc8; font-size: 12px; margin: 5px 0 10px 0; }
+
+.control-btn {
+  background-color: transparent;
+  color: #cdd6f4;
+  font-size: 24px;
+  border-radius: 100px;
+}
+
+.control-btn.play-pause {
+  background-color: #a6e3a1;
+  color: #1e1e2e;
+  padding: 0 18px;
+}
