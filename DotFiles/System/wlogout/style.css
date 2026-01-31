@@ -1,0 +1,95 @@
+@import "colors.css";
+
+* {
+  background-image: none;
+  font-size: 14px;
+}
+
+window {
+    background-color: rgba(0, 0, 0, 0.3);    
+  }
+  button {
+  color: #E6F6FF;
+  background-color: @on_primary_fixed;
+  outline-style: none;
+  border: none;
+  border-width: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15%;
+  border-radius: 0px;
+  box-shadow: none;
+  text-shadow: none;
+  animation: gradient_f 20s ease-in infinite;
+}
+
+button:hover, button:focus {
+  background-color: @on_primary;
+  border-radius: 16px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.6s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+#lock {
+  background-image:
+    url("$HOME/.config/wlogout/icons/lock_white.png"),
+    url("/usr/share/wlogout/icons/lock.png"),
+    url("/usr/local/share/wlogout/icons/lock.png");
+  border-radius: 32px 0px 0px 0px;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+button#lock:focus {
+  margin-left: 140px;
+  margin-top: 0px;
+  border-radius: 32px 32px 0px 32px;
+}
+
+#logout {
+  background-image:
+    url("$HOME/.config/wlogout/icons/logout_white.png"),
+    url("/usr/share/wlogout/icons/logout.png"),
+    url("/usr/local/share/wlogout/icons/logout.png");
+  border-radius: 0px 0px 0px 32px;
+  margin-left: 200px;
+  margin-bottom: 40px;
+}
+
+button#logout:focus {
+  margin-left: 140px;
+  margin-bottom: 0px;
+  border-radius: 32px 0px 32px 32px;
+}
+
+#shutdown {
+  background-image:
+    url("$HOME/.config/wlogout/icons/shutdown_white.png"),
+    url("/usr/share/wlogout/icons/shutdown.png"),
+    url("/usr/local/share/wlogout/icons/shutdown.png");
+  border-radius: 0px 32px 0px 0px;
+  margin-right: 200px;
+  margin-top: 40px;
+}
+
+button#shutdown:focus {
+  margin-right: 140px;
+  margin-top: 0px;
+  border-radius: 32px 32px 32px 0px;
+}
+
+#reboot {
+  background-image:
+    url("$HOME/.config/wlogout/icons/reboot_white.png"),
+    url("/usr/share/wlogout/icons/reboot.png"),
+    url("/usr/local/share/wlogout/icons/reboot.png");
+  border-radius: 0px 0px 32px 0px;
+  margin-right: 200px;
+  margin-bottom: 40px;
+}
+
+button#reboot:focus {
+  margin-right: 140px;
+  margin-bottom: 0px;
+  border-radius: 0px 32px 32px 32px;
+}
