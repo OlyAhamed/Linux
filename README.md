@@ -33,7 +33,7 @@ Custom widgets built with `eww` to handle media playback, system controls, and s
 
 ##  Repository Breakdown
 
-* **`Sway-Config/`**: **[ACTIVE]** My current Sway window manager setup.
+* **`Sway-Config/ & DotFiles`**: **[ACTIVE]** My current Sway window manager setup.
 * **`.config/`**: **[LEGACY]** Old configurations (No longer updated).
 * **Other Scripts**: Assorted tools and tweaks collected over time.
 
